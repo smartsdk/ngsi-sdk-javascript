@@ -1,4 +1,4 @@
-# ngsi_v2
+# NGSI v2 Javascript and NodeJS SDK 
 
 NgsiV2 - JavaScript client for ngsi_v2
 NGSI V2 API description in Swagger
