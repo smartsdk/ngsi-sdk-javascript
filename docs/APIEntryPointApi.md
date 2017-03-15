@@ -1,0 +1,49 @@
+# NgsiV2ExtensionTimeseries.APIEntryPointApi
+
+All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**retrieveAPIResources**](APIEntryPointApi.md#retrieveAPIResources) | **GET** / | 
+
+
+<a name="retrieveAPIResources"></a>
+# **retrieveAPIResources**
+> RetrieveApiResourcesResponse retrieveAPIResources()
+
+
+
+This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body. It is recommended to follow the “url” link values, [Link](https://tools.ietf.org/html/rfc5988) or Location headers where applicable to retrieve resources. Instead of constructing your own URLs, to keep your client decoupled from implementation details.
+
+### Example
+```javascript
+var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+
+var apiInstance = new NgsiV2ExtensionTimeseries.APIEntryPointApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.retrieveAPIResources(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**RetrieveApiResourcesResponse**](RetrieveApiResourcesResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
