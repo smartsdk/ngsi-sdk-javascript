@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest();
+    instance = new NgsiV2.UpdateExistingEntityAttributesRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('UpdateExistingEntityAttributesRequest', function() {
     it('should create an instance of UpdateExistingEntityAttributesRequest', function() {
       // uncomment below and update the code to test UpdateExistingEntityAttributesRequest
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest);
+      //var instane = new NgsiV2.UpdateExistingEntityAttributesRequest();
+      //expect(instance).to.be.a(NgsiV2.UpdateExistingEntityAttributesRequest);
     });
 
     it('should have the property temperature (base name: "temperature")', function() {
       // uncomment below and update the code to test the property temperature
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest();
+      //var instane = new NgsiV2.UpdateExistingEntityAttributesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property seatNumber (base name: "seatNumber")', function() {
       // uncomment below and update the code to test the property seatNumber
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest();
+      //var instane = new NgsiV2.UpdateExistingEntityAttributesRequest();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.AttributeValueApi
+# NgsiV2.AttributeValueApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -18,9 +18,9 @@ This operation returns the &#x60;value&#x60; property with the value of the attr
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.AttributeValueApi();
+var apiInstance = new NgsiV2.AttributeValueApi();
 
 var entityId = "entityId_example"; // String | Id of the entity in question
 
@@ -71,15 +71,15 @@ The request payload is the new attribute value. * If the request payload MIME ty
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.AttributeValueApi();
+var apiInstance = new NgsiV2.AttributeValueApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be updated.
 
 var attrName = "attrName_example"; // String | Attribute name.
 
-var body = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest(); // UpdateAttributeValueRequest | 
+var body = new NgsiV2.UpdateAttributeValueRequest(); // UpdateAttributeValueRequest | 
 
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.

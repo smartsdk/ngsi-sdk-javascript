@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.SubscriptionsApi
+# NgsiV2.SubscriptionsApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -21,11 +21,11 @@ Creates a new subscription. The subscription is represented by a JSON object as 
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.SubscriptionsApi();
+var apiInstance = new NgsiV2.SubscriptionsApi();
 
-var body = new NgsiV2ExtensionTimeseries.CreateANewSubscriptionRequest(); // CreateANewSubscriptionRequest | 
+var body = new NgsiV2.CreateANewSubscriptionRequest(); // CreateANewSubscriptionRequest | 
 
 
 var callback = function(error, data, response) {
@@ -67,9 +67,9 @@ Cancels subscription. Response: * Successful operation uses 204 No Content * Err
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.SubscriptionsApi();
+var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
@@ -113,9 +113,9 @@ The response is the subscription represented by a JSON object as described at th
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.SubscriptionsApi();
+var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
@@ -159,9 +159,9 @@ Returns a list of all the subscriptions present in the system. Response: * Succe
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.SubscriptionsApi();
+var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of types to be retrieved
@@ -210,13 +210,13 @@ Only the fields included in the request are updated in the subscription. Respons
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.SubscriptionsApi();
+var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
-var body = new NgsiV2ExtensionTimeseries.UpdateSubscriptionRequest(); // UpdateSubscriptionRequest | 
+var body = new NgsiV2.UpdateSubscriptionRequest(); // UpdateSubscriptionRequest | 
 
 
 var callback = function(error, data, response) {

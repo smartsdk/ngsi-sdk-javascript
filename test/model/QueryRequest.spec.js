@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.QueryRequest();
+    instance = new NgsiV2.QueryRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('QueryRequest', function() {
     it('should create an instance of QueryRequest', function() {
       // uncomment below and update the code to test QueryRequest
-      //var instane = new NgsiV2ExtensionTimeseries.QueryRequest();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.QueryRequest);
+      //var instane = new NgsiV2.QueryRequest();
+      //expect(instance).to.be.a(NgsiV2.QueryRequest);
     });
 
     it('should have the property entities (base name: "entities")', function() {
       // uncomment below and update the code to test the property entities
-      //var instane = new NgsiV2ExtensionTimeseries.QueryRequest();
+      //var instane = new NgsiV2.QueryRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new NgsiV2ExtensionTimeseries.QueryRequest();
+      //var instane = new NgsiV2.QueryRequest();
       //expect(instance).to.be();
     });
 

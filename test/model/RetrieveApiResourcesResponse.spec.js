@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse();
+    instance = new NgsiV2.RetrieveApiResourcesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('RetrieveApiResourcesResponse', function() {
     it('should create an instance of RetrieveApiResourcesResponse', function() {
       // uncomment below and update the code to test RetrieveApiResourcesResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse);
+      //var instane = new NgsiV2.RetrieveApiResourcesResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveApiResourcesResponse);
     });
 
     it('should have the property entitiesUrl (base name: "entities_url")', function() {
       // uncomment below and update the code to test the property entitiesUrl
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse();
+      //var instane = new NgsiV2.RetrieveApiResourcesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property typesUrl (base name: "types_url")', function() {
       // uncomment below and update the code to test the property typesUrl
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse();
+      //var instane = new NgsiV2.RetrieveApiResourcesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property subscriptionsUrl (base name: "subscriptions_url")', function() {
       // uncomment below and update the code to test the property subscriptionsUrl
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse();
+      //var instane = new NgsiV2.RetrieveApiResourcesResponse();
       //expect(instance).to.be();
     });
 

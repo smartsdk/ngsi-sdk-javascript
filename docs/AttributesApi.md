@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.AttributesApi
+# NgsiV2.AttributesApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -19,9 +19,9 @@ Returns a JSON object with the attribute data of the attribute. The object follo
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.AttributesApi();
+var apiInstance = new NgsiV2.AttributesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity
 
@@ -72,9 +72,9 @@ Removes an entity attribute. Response: * Successful operation uses 204 No Conten
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.AttributesApi();
+var apiInstance = new NgsiV2.AttributesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity.
 
@@ -125,15 +125,15 @@ The request payload is an object representing the new attribute data. Previous a
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.AttributesApi();
+var apiInstance = new NgsiV2.AttributesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to update
 
 var attrName = "attrName_example"; // String | Attribute name
 
-var body = new NgsiV2ExtensionTimeseries.UpdateAttributeDataRequest(); // UpdateAttributeDataRequest | 
+var body = new NgsiV2.UpdateAttributeDataRequest(); // UpdateAttributeDataRequest | 
 
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.

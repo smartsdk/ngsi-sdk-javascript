@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse();
+    instance = new NgsiV2.RetrieveEntityAttributesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('RetrieveEntityAttributesResponse', function() {
     it('should create an instance of RetrieveEntityAttributesResponse', function() {
       // uncomment below and update the code to test RetrieveEntityAttributesResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse);
+      //var instane = new NgsiV2.RetrieveEntityAttributesResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveEntityAttributesResponse);
     });
 
     it('should have the property temperature (base name: "temperature")', function() {
       // uncomment below and update the code to test the property temperature
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse();
+      //var instane = new NgsiV2.RetrieveEntityAttributesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property humidity (base name: "humidity")', function() {
       // uncomment below and update the code to test the property humidity
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse();
+      //var instane = new NgsiV2.RetrieveEntityAttributesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property location (base name: "location")', function() {
       // uncomment below and update the code to test the property location
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse();
+      //var instane = new NgsiV2.RetrieveEntityAttributesResponse();
       //expect(instance).to.be();
     });
 

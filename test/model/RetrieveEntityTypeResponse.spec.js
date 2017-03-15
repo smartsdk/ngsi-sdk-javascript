@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveEntityTypeResponse();
+    instance = new NgsiV2.RetrieveEntityTypeResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('RetrieveEntityTypeResponse', function() {
     it('should create an instance of RetrieveEntityTypeResponse', function() {
       // uncomment below and update the code to test RetrieveEntityTypeResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypeResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveEntityTypeResponse);
+      //var instane = new NgsiV2.RetrieveEntityTypeResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveEntityTypeResponse);
     });
 
     it('should have the property attrs (base name: "attrs")', function() {
       // uncomment below and update the code to test the property attrs
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypeResponse();
+      //var instane = new NgsiV2.RetrieveEntityTypeResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypeResponse();
+      //var instane = new NgsiV2.RetrieveEntityTypeResponse();
       //expect(instance).to.be();
     });
 

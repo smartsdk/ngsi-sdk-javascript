@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateANewSubscriptionRequest'), require('../model/RetrieveSubscriptionResponse'), require('../model/RetrieveSubscriptionsResponse'), require('../model/UpdateSubscriptionRequest'));
   } else {
     // Browser globals (root is window)
-    if (!root.NgsiV2ExtensionTimeseries) {
-      root.NgsiV2ExtensionTimeseries = {};
+    if (!root.NgsiV2) {
+      root.NgsiV2 = {};
     }
-    root.NgsiV2ExtensionTimeseries.SubscriptionsApi = factory(root.NgsiV2ExtensionTimeseries.ApiClient, root.NgsiV2ExtensionTimeseries.CreateANewSubscriptionRequest, root.NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse, root.NgsiV2ExtensionTimeseries.RetrieveSubscriptionsResponse, root.NgsiV2ExtensionTimeseries.UpdateSubscriptionRequest);
+    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.CreateANewSubscriptionRequest, root.NgsiV2.RetrieveSubscriptionResponse, root.NgsiV2.RetrieveSubscriptionsResponse, root.NgsiV2.UpdateSubscriptionRequest);
   }
 }(this, function(ApiClient, CreateANewSubscriptionRequest, RetrieveSubscriptionResponse, RetrieveSubscriptionsResponse, UpdateSubscriptionRequest) {
   'use strict';

@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.QueryResponse();
+    instance = new NgsiV2.QueryResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,31 +61,31 @@
   describe('QueryResponse', function() {
     it('should create an instance of QueryResponse', function() {
       // uncomment below and update the code to test QueryResponse
-      //var instane = new NgsiV2ExtensionTimeseries.QueryResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.QueryResponse);
+      //var instane = new NgsiV2.QueryResponse();
+      //expect(instance).to.be.a(NgsiV2.QueryResponse);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new NgsiV2ExtensionTimeseries.QueryResponse();
+      //var instane = new NgsiV2.QueryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new NgsiV2ExtensionTimeseries.QueryResponse();
+      //var instane = new NgsiV2.QueryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property temperature (base name: "temperature")', function() {
       // uncomment below and update the code to test the property temperature
-      //var instane = new NgsiV2ExtensionTimeseries.QueryResponse();
+      //var instane = new NgsiV2.QueryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property speed (base name: "speed")', function() {
       // uncomment below and update the code to test the property speed
-      //var instane = new NgsiV2ExtensionTimeseries.QueryResponse();
+      //var instane = new NgsiV2.QueryResponse();
       //expect(instance).to.be();
     });
 

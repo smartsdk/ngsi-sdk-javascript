@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/RetrieveApiResourcesResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.NgsiV2ExtensionTimeseries) {
-      root.NgsiV2ExtensionTimeseries = {};
+    if (!root.NgsiV2) {
+      root.NgsiV2 = {};
     }
-    root.NgsiV2ExtensionTimeseries.APIEntryPointApi = factory(root.NgsiV2ExtensionTimeseries.ApiClient, root.NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse);
+    root.NgsiV2.APIEntryPointApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.RetrieveApiResourcesResponse);
   }
 }(this, function(ApiClient, RetrieveApiResourcesResponse) {
   'use strict';

@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.TypesApi
+# NgsiV2.TypesApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -18,9 +18,9 @@ This operation returns a JSON object with information about the type: * &#x60;at
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.TypesApi();
+var apiInstance = new NgsiV2.TypesApi();
 
 var entityType = "entityType_example"; // String | Entity Type
 
@@ -64,9 +64,9 @@ If the &#x60;values&#x60; option is not in use, this operation returns a JSON ar
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.TypesApi();
+var apiInstance = new NgsiV2.TypesApi();
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of types to be retrieved.

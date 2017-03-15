@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.GetAttributeDataResponse
+# NgsiV2.GetAttributeDataResponse
 
 ## Properties
 Name | Type | Description | Notes

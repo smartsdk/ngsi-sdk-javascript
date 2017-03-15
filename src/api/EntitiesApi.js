@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/CreateEntityRequest'), require('../model/ListEntitiesResponse'), require('../model/ReplaceAllEntityAttributesRequest'), require('../model/RetrieveEntityAttributesResponse'), require('../model/RetrieveEntityResponse'), require('../model/UpdateExistingEntityAttributesRequest'), require('../model/UpdateOrAppendEntityAttributesRequest'));
   } else {
     // Browser globals (root is window)
-    if (!root.NgsiV2ExtensionTimeseries) {
-      root.NgsiV2ExtensionTimeseries = {};
+    if (!root.NgsiV2) {
+      root.NgsiV2 = {};
     }
-    root.NgsiV2ExtensionTimeseries.EntitiesApi = factory(root.NgsiV2ExtensionTimeseries.ApiClient, root.NgsiV2ExtensionTimeseries.CreateEntityRequest, root.NgsiV2ExtensionTimeseries.ListEntitiesResponse, root.NgsiV2ExtensionTimeseries.ReplaceAllEntityAttributesRequest, root.NgsiV2ExtensionTimeseries.RetrieveEntityAttributesResponse, root.NgsiV2ExtensionTimeseries.RetrieveEntityResponse, root.NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest, root.NgsiV2ExtensionTimeseries.UpdateOrAppendEntityAttributesRequest);
+    root.NgsiV2.EntitiesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.CreateEntityRequest, root.NgsiV2.ListEntitiesResponse, root.NgsiV2.ReplaceAllEntityAttributesRequest, root.NgsiV2.RetrieveEntityAttributesResponse, root.NgsiV2.RetrieveEntityResponse, root.NgsiV2.UpdateExistingEntityAttributesRequest, root.NgsiV2.UpdateOrAppendEntityAttributesRequest);
   }
 }(this, function(ApiClient, CreateEntityRequest, ListEntitiesResponse, ReplaceAllEntityAttributesRequest, RetrieveEntityAttributesResponse, RetrieveEntityResponse, UpdateExistingEntityAttributesRequest, UpdateOrAppendEntityAttributesRequest) {
   'use strict';

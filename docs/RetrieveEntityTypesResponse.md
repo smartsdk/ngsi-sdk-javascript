@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse
+# NgsiV2.RetrieveEntityTypesResponse
 
 ## Properties
 Name | Type | Description | Notes

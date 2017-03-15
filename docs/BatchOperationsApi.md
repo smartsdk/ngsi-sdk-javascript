@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.BatchOperationsApi
+# NgsiV2.BatchOperationsApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -18,11 +18,11 @@ The response payload is an Array containing one object per matching entity, or a
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.BatchOperationsApi();
+var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2ExtensionTimeseries.QueryRequest(); // QueryRequest | 
+var body = new NgsiV2.QueryRequest(); // QueryRequest | 
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of entities to be retrieved.
@@ -74,11 +74,11 @@ This operation allows to create, update and/or delete several entities in a sing
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.BatchOperationsApi();
+var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2ExtensionTimeseries.UpdateRequest(); // UpdateRequest | 
+var body = new NgsiV2.UpdateRequest(); // UpdateRequest | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary

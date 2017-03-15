@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse();
+    instance = new NgsiV2.RetrieveEntityTypesResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('RetrieveEntityTypesResponse', function() {
     it('should create an instance of RetrieveEntityTypesResponse', function() {
       // uncomment below and update the code to test RetrieveEntityTypesResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse);
+      //var instane = new NgsiV2.RetrieveEntityTypesResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveEntityTypesResponse);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse();
+      //var instane = new NgsiV2.RetrieveEntityTypesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property attrs (base name: "attrs")', function() {
       // uncomment below and update the code to test the property attrs
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse();
+      //var instane = new NgsiV2.RetrieveEntityTypesResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityTypesResponse();
+      //var instane = new NgsiV2.RetrieveEntityTypesResponse();
       //expect(instance).to.be();
     });
 

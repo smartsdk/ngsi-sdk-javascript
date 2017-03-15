@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.EntitiesApi
+# NgsiV2.EntitiesApi
 
 All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
 
@@ -24,11 +24,11 @@ The payload is an object representing the entity to be created. The object follo
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
-var body = new NgsiV2ExtensionTimeseries.CreateEntityRequest(); // CreateEntityRequest | 
+var body = new NgsiV2.CreateEntityRequest(); // CreateEntityRequest | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -74,9 +74,9 @@ Retrieves a list of entities that match different criteria by id, type, pattern 
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var opts = { 
   'id': "id_example", // String | A comma-separated list of elements. Retrieve entities whose ID matches one of the elements in the list. Incompatible with idPattern.
@@ -147,9 +147,9 @@ Delete the entity. Response: * Successful operation uses 204 No Content * Errors
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be deleted
 
@@ -197,13 +197,13 @@ The request payload is an object representing the new entity attributes. The obj
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity in question.
 
-var body = new NgsiV2ExtensionTimeseries.ReplaceAllEntityAttributesRequest(); // ReplaceAllEntityAttributesRequest | 
+var body = new NgsiV2.ReplaceAllEntityAttributesRequest(); // ReplaceAllEntityAttributesRequest | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
@@ -252,9 +252,9 @@ The response is an object representing the entity identified by the ID. The obje
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be retrieved
 
@@ -306,9 +306,9 @@ This request is similar to retreiving the whole entity, however this one omits t
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be retrieved
 
@@ -360,13 +360,13 @@ The request payload is an object representing the attributes to update. The obje
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be updated
 
-var body = new NgsiV2ExtensionTimeseries.UpdateExistingEntityAttributesRequest(); // UpdateExistingEntityAttributesRequest | 
+var body = new NgsiV2.UpdateExistingEntityAttributesRequest(); // UpdateExistingEntityAttributesRequest | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -415,13 +415,13 @@ The request payload is an object representing the attributes to append or update
 
 ### Example
 ```javascript
-var NgsiV2ExtensionTimeseries = require('ngsi_v2_extension_timeseries');
+var NgsiV2 = require('ngsi_v2');
 
-var apiInstance = new NgsiV2ExtensionTimeseries.EntitiesApi();
+var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Entity id to be updated
 
-var body = new NgsiV2ExtensionTimeseries.UpdateOrAppendEntityAttributesRequest(); // UpdateOrAppendEntityAttributesRequest | 
+var body = new NgsiV2.UpdateOrAppendEntityAttributesRequest(); // UpdateOrAppendEntityAttributesRequest | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.

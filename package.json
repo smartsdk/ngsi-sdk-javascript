@@ -1,7 +1,7 @@
 {
-  "name": "ngsi_v2_extension_timeseries",
+  "name": "ngsi_v2",
   "version": "v2",
-  "description": "An_API_extending_NGSI_V2_to_support_timeseries",
+  "description": "NGSI_V2_API_description_in_Swagger",
   "license": "Apache-2.0",
   "main": "src/index.js",
   "scripts": {

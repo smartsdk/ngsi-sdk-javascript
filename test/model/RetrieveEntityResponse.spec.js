@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+    instance = new NgsiV2.RetrieveEntityResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,37 +61,37 @@
   describe('RetrieveEntityResponse', function() {
     it('should create an instance of RetrieveEntityResponse', function() {
       // uncomment below and update the code to test RetrieveEntityResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveEntityResponse);
+      //var instane = new NgsiV2.RetrieveEntityResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveEntityResponse);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+      //var instane = new NgsiV2.RetrieveEntityResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+      //var instane = new NgsiV2.RetrieveEntityResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property temperature (base name: "temperature")', function() {
       // uncomment below and update the code to test the property temperature
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+      //var instane = new NgsiV2.RetrieveEntityResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property humidity (base name: "humidity")', function() {
       // uncomment below and update the code to test the property humidity
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+      //var instane = new NgsiV2.RetrieveEntityResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property location (base name: "location")', function() {
       // uncomment below and update the code to test the property location
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveEntityResponse();
+      //var instane = new NgsiV2.RetrieveEntityResponse();
       //expect(instance).to.be();
     });
 

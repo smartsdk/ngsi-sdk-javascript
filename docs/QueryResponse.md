@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.QueryResponse
+# NgsiV2.QueryResponse
 
 ## Properties
 Name | Type | Description | Notes

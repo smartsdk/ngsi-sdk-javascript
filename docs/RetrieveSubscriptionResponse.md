@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse
+# NgsiV2.RetrieveSubscriptionResponse
 
 ## Properties
 Name | Type | Description | Notes

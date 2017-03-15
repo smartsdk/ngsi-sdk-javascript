@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+    instance = new NgsiV2.RetrieveSubscriptionResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,49 +61,49 @@
   describe('RetrieveSubscriptionResponse', function() {
     it('should create an instance of RetrieveSubscriptionResponse', function() {
       // uncomment below and update the code to test RetrieveSubscriptionResponse
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse);
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
+      //expect(instance).to.be.a(NgsiV2.RetrieveSubscriptionResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property subject (base name: "subject")', function() {
       // uncomment below and update the code to test the property subject
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property notification (base name: "notification")', function() {
       // uncomment below and update the code to test the property notification
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property expires (base name: "expires")', function() {
       // uncomment below and update the code to test the property expires
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property throttling (base name: "throttling")', function() {
       // uncomment below and update the code to test the property throttling
-      //var instane = new NgsiV2ExtensionTimeseries.RetrieveSubscriptionResponse();
+      //var instane = new NgsiV2.RetrieveSubscriptionResponse();
       //expect(instance).to.be();
     });
 

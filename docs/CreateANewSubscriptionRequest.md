@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.CreateANewSubscriptionRequest
+# NgsiV2.CreateANewSubscriptionRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.CreateEntityRequest
+# NgsiV2.CreateEntityRequest
 
 ## Properties
 Name | Type | Description | Notes

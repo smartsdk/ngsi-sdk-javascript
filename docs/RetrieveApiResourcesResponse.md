@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.RetrieveApiResourcesResponse
+# NgsiV2.RetrieveApiResourcesResponse
 
 ## Properties
 Name | Type | Description | Notes

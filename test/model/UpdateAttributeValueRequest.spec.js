@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
+    instance = new NgsiV2.UpdateAttributeValueRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,31 +61,31 @@
   describe('UpdateAttributeValueRequest', function() {
     it('should create an instance of UpdateAttributeValueRequest', function() {
       // uncomment below and update the code to test UpdateAttributeValueRequest
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest);
+      //var instane = new NgsiV2.UpdateAttributeValueRequest();
+      //expect(instance).to.be.a(NgsiV2.UpdateAttributeValueRequest);
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
+      //var instane = new NgsiV2.UpdateAttributeValueRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property zipCode (base name: "zipCode")', function() {
       // uncomment below and update the code to test the property zipCode
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
+      //var instane = new NgsiV2.UpdateAttributeValueRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
+      //var instane = new NgsiV2.UpdateAttributeValueRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new NgsiV2ExtensionTimeseries.UpdateAttributeValueRequest();
+      //var instane = new NgsiV2.UpdateAttributeValueRequest();
       //expect(instance).to.be();
     });
 

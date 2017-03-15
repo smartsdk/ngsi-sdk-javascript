@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.UpdateAttributeDataRequest
+# NgsiV2.UpdateAttributeDataRequest
 
 ## Properties
 Name | Type | Description | Notes

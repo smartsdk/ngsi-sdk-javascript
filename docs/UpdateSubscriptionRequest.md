@@ -1,4 +1,4 @@
-# NgsiV2ExtensionTimeseries.UpdateSubscriptionRequest
+# NgsiV2.UpdateSubscriptionRequest
 
 ## Properties
 Name | Type | Description | Notes

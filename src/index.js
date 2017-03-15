@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -34,14 +34,14 @@
   'use strict';
 
   /**
-   * An_API_extending_NGSI_V2_to_support_timeseries.<br>
+   * NGSI_V2_API_description_in_Swagger.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var NgsiV2ExtensionTimeseries = require('index'); // See note below*.
-   * var xxxSvc = new NgsiV2ExtensionTimeseries.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new NgsiV2ExtensionTimeseries.Yyy(); // Construct a model instance.
+   * var NgsiV2 = require('index'); // See note below*.
+   * var xxxSvc = new NgsiV2.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new NgsiV2.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -53,8 +53,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new NgsiV2ExtensionTimeseries.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new NgsiV2ExtensionTimeseries.Yyy(); // Construct a model instance.
+   * var xxxSvc = new NgsiV2.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new NgsiV2.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

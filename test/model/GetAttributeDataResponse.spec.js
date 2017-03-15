@@ -1,6 +1,6 @@
 /**
- * ngsi-v2-extension-timeseries
- * An API extending NGSI V2 to support timeseries
+ * ngsi-v2
+ * NGSI V2 API description in Swagger
  *
  * OpenAPI spec version: v2
  * 
@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.NgsiV2ExtensionTimeseries);
+    factory(root.expect, root.NgsiV2);
   }
-}(this, function(expect, NgsiV2ExtensionTimeseries) {
+}(this, function(expect, NgsiV2) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2ExtensionTimeseries.GetAttributeDataResponse();
+    instance = new NgsiV2.GetAttributeDataResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('GetAttributeDataResponse', function() {
     it('should create an instance of GetAttributeDataResponse', function() {
       // uncomment below and update the code to test GetAttributeDataResponse
-      //var instane = new NgsiV2ExtensionTimeseries.GetAttributeDataResponse();
-      //expect(instance).to.be.a(NgsiV2ExtensionTimeseries.GetAttributeDataResponse);
+      //var instane = new NgsiV2.GetAttributeDataResponse();
+      //expect(instance).to.be.a(NgsiV2.GetAttributeDataResponse);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new NgsiV2ExtensionTimeseries.GetAttributeDataResponse();
+      //var instane = new NgsiV2.GetAttributeDataResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new NgsiV2ExtensionTimeseries.GetAttributeDataResponse();
+      //var instane = new NgsiV2.GetAttributeDataResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property metadata (base name: "metadata")', function() {
       // uncomment below and update the code to test the property metadata
-      //var instane = new NgsiV2ExtensionTimeseries.GetAttributeDataResponse();
+      //var instane = new NgsiV2.GetAttributeDataResponse();
       //expect(instance).to.be();
     });
 
