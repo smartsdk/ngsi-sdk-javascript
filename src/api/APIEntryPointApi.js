@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RetrieveApiResourcesResponse'], factory);
+    define(['ApiClient', 'model/InlineResponse200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/RetrieveApiResourcesResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse200'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.APIEntryPointApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.RetrieveApiResourcesResponse);
+    root.NgsiV2.APIEntryPointApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.InlineResponse200);
   }
-}(this, function(ApiClient, RetrieveApiResourcesResponse) {
+}(this, function(ApiClient, InlineResponse200) {
   'use strict';
 
   /**
@@ -60,14 +60,14 @@
      * Callback function to receive the result of the retrieveAPIResources operation.
      * @callback module:api/APIEntryPointApi~retrieveAPIResourcesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RetrieveApiResourcesResponse} data The data returned by the service call.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body. It is recommended to follow the “url” link values, [Link](https://tools.ietf.org/html/rfc5988) or Location headers where applicable to retrieve resources. Instead of constructing your own URLs, to keep your client decoupled from implementation details.
      * @param {module:api/APIEntryPointApi~retrieveAPIResourcesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RetrieveApiResourcesResponse}
+     * data is of type: {@link module:model/InlineResponse200}
      */
     this.retrieveAPIResources = function(callback) {
       var postBody = null;
@@ -85,7 +85,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RetrieveApiResourcesResponse;
+      var returnType = InlineResponse200;
 
       return this.apiClient.callApi(
         '/', 'GET',

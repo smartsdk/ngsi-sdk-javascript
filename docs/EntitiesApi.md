@@ -28,7 +28,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.EntitiesApi();
 
-var body = new NgsiV2.CreateEntityRequest(); // CreateEntityRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -48,7 +48,7 @@ apiInstance.createEntity(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateEntityRequest**](CreateEntityRequest.md)|  | 
+ **body** | **Object**|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -66,7 +66,7 @@ No authorization required
 
 <a name="listEntities"></a>
 # **listEntities**
-> [ListEntitiesResponse] listEntities(opts)
+> [Object] listEntities(opts)
 
 
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListEntitiesResponse]**](ListEntitiesResponse.md)
+**[Object]**
 
 ### Authorization
 
@@ -203,7 +203,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity in question.
 
-var body = new NgsiV2.ReplaceAllEntityAttributesRequest(); // ReplaceAllEntityAttributesRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
@@ -225,7 +225,7 @@ apiInstance.replaceAllEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity in question. | 
- **body** | [**ReplaceAllEntityAttributesRequest**](ReplaceAllEntityAttributesRequest.md)|  | 
+ **body** | **Object**|  | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 
@@ -244,7 +244,7 @@ No authorization required
 
 <a name="retrieveEntity"></a>
 # **retrieveEntity**
-> RetrieveEntityResponse retrieveEntity(entityId, opts)
+> Object retrieveEntity(entityId, opts)
 
 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveEntityResponse**](RetrieveEntityResponse.md)
+**Object**
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 
 <a name="retrieveEntityAttributes"></a>
 # **retrieveEntityAttributes**
-> RetrieveEntityAttributesResponse retrieveEntityAttributes(entityId, opts)
+> Object retrieveEntityAttributes(entityId, opts)
 
 
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveEntityAttributesResponse**](RetrieveEntityAttributesResponse.md)
+**Object**
 
 ### Authorization
 
@@ -366,7 +366,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be updated
 
-var body = new NgsiV2.UpdateExistingEntityAttributesRequest(); // UpdateExistingEntityAttributesRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -388,7 +388,7 @@ apiInstance.updateExistingEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to be updated | 
- **body** | [**UpdateExistingEntityAttributesRequest**](UpdateExistingEntityAttributesRequest.md)|  | 
+ **body** | **Object**|  | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 
@@ -421,7 +421,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Entity id to be updated
 
-var body = new NgsiV2.UpdateOrAppendEntityAttributesRequest(); // UpdateOrAppendEntityAttributesRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -443,7 +443,7 @@ apiInstance.updateOrAppendEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Entity id to be updated | 
- **body** | [**UpdateOrAppendEntityAttributesRequest**](UpdateOrAppendEntityAttributesRequest.md)|  | 
+ **body** | **Object**|  | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 

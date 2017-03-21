@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getAttributeValue"></a>
 # **getAttributeValue**
-> GetAttributeValueResponse getAttributeValue(entityId, attrName, opts)
+> Object getAttributeValue(entityId, attrName, opts)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAttributeValueResponse**](GetAttributeValueResponse.md)
+**Object**
 
 ### Authorization
 
@@ -79,7 +79,7 @@ var entityId = "entityId_example"; // String | Id of the entity to be updated.
 
 var attrName = "attrName_example"; // String | Attribute name.
 
-var body = new NgsiV2.UpdateAttributeValueRequest(); // UpdateAttributeValueRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to be updated. | 
  **attrName** | **String**| Attribute name. | 
- **body** | [**UpdateAttributeValueRequest**](UpdateAttributeValueRequest.md)|  | 
+ **body** | **Object**|  | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
 
 ### Return type

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetAttributeDataResponse', 'model/UpdateAttributeDataRequest'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GetAttributeDataResponse'), require('../model/UpdateAttributeDataRequest'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.GetAttributeDataResponse, root.NgsiV2.UpdateAttributeDataRequest);
+    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient);
   }
-}(this, function(ApiClient, GetAttributeDataResponse, UpdateAttributeDataRequest) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
      * Callback function to receive the result of the getAttributeData operation.
      * @callback module:api/AttributesApi~getAttributeDataCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetAttributeDataResponse} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -71,7 +71,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:api/AttributesApi~getAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetAttributeDataResponse}
+     * data is of type: {@link Object}
      */
     this.getAttributeData = function(entityId, attrName, opts, callback) {
       opts = opts || {};
@@ -103,7 +103,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = GetAttributeDataResponse;
+      var returnType = Object;
 
       return this.apiClient.callApi(
         '/entities/{entityId}/attrs/{attrName}', 'GET',
@@ -179,7 +179,7 @@
      * The request payload is an object representing the new attribute data. Previous attribute data is replaced by the one in the request. The object follows the JSON representation for attributes (described in \&quot;JSON Attribute Representation\&quot; section). Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityId Id of the entity to update
      * @param {String} attrName Attribute name
-     * @param {module:model/UpdateAttributeDataRequest} body 
+     * @param {Object} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {module:api/AttributesApi~updateAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="retrieveEntityType"></a>
 # **retrieveEntityType**
-> RetrieveEntityTypeResponse retrieveEntityType(entityType)
+> Object retrieveEntityType(entityType)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveEntityTypeResponse**](RetrieveEntityTypeResponse.md)
+**Object**
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 
 <a name="retrieveEntityTypes"></a>
 # **retrieveEntityTypes**
-> [RetrieveEntityTypesResponse] retrieveEntityTypes(opts)
+> [Object] retrieveEntityTypes(opts)
 
 
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RetrieveEntityTypesResponse]**](RetrieveEntityTypesResponse.md)
+**[Object]**
 
 ### Authorization
 

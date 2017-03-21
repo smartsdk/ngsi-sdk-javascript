@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAttributeData"></a>
 # **getAttributeData**
-> GetAttributeDataResponse getAttributeData(entityId, attrName, opts)
+> Object getAttributeData(entityId, attrName, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAttributeDataResponse**](GetAttributeDataResponse.md)
+**Object**
 
 ### Authorization
 
@@ -133,7 +133,7 @@ var entityId = "entityId_example"; // String | Id of the entity to update
 
 var attrName = "attrName_example"; // String | Attribute name
 
-var body = new NgsiV2.UpdateAttributeDataRequest(); // UpdateAttributeDataRequest | 
+var body = null; // Object | 
 
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to update | 
  **attrName** | **String**| Attribute name | 
- **body** | [**UpdateAttributeDataRequest**](UpdateAttributeDataRequest.md)|  | 
+ **body** | **Object**|  | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
 
 ### Return type
