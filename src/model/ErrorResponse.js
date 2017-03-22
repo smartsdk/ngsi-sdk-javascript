@@ -50,6 +50,7 @@
 
   /**
    * Constructs a new <code>ErrorResponse</code>.
+   * All NGSIv2 server implementations must use the following HTTP response codes and error texts. However, the particular text used for description field is an implementation specific aspect. Error list (HTTP response code in parenthesis): * &#x60;ParseError&#x60; (400). The incoming JSON payload cannot be parsed. * &#x60;BadRequest&#x60; (400). The incoming request is invalid in this context. * &#x60;NotFound&#x60; (404). The resource (entity, subscription, etc.) referred in the request has not been found. * &#x60;TooManyResults&#x60; (409). There are several results that match with the resource identification used in the request. * &#x60;ContentLengthRequired&#x60; (411). Zero/No Content-Length in PUT/POST/PATCH request. * &#x60;RequestEntityTooLarge&#x60; (413). Payload is too large. * &#x60;UnsupportedMediaType&#x60; (415). Request content type is not supported. * &#x60;InvalidModification&#x60; (422). Some piece of information is missing in payload. * &#x60;NotSupportedQuery&#x60; (422). The implementation does not support the query issued. * &#x60;NoResourcesAvailable&#x60; (413). There are no server resources to fulfill the client request. New error codes may be defined in new iterations of this specificatio.
    * @alias module:model/ErrorResponse
    * @class
    * @param error {String} 
