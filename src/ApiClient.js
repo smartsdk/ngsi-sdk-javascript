@@ -64,7 +64,6 @@
      * @type {Array.<String>}
      */
     this.authentications = {
-      'fiware_oauth2': {type: 'oauth2'},
       'fiware_token': {type: 'apiKey', 'in': 'header', name: 'X-Auth-Token'}
     };
     /**

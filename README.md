@@ -121,15 +121,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Authorization
 
 
-### fiware_oauth2
-
-- **Type**: OAuth
-- **Flow**: password
-- **Authorization URL**: 
-- **Scopes**: 
-  - read: read
-  - write: write
-
 ### fiware_token
 
 - **Type**: API key
