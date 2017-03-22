@@ -88,7 +88,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -132,7 +132,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -177,7 +177,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Subscription;
 
@@ -223,7 +223,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [Subscription];
 
@@ -273,7 +273,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 

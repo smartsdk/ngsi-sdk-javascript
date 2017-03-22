@@ -101,7 +101,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json', 'plain/text'];
       var returnType = AttributeValue;
 
@@ -162,7 +162,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = ['application/json'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 
