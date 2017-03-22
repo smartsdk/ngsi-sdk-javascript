@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -45,7 +45,7 @@
   /**
    * The Entity model module.
    * @module model/Entity
-   * @version v2
+   * @version 0.1.0
    */
 
   /**

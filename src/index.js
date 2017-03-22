@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -25,16 +25,16 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/APIEntryPoint', 'model/Attribute', 'model/AttributeValue', 'model/BatchOperation', 'model/Entity', 'model/EntityType', 'model/ErrorResponse', 'model/Query', 'model/QueryPattern', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/Attribute', 'model/AttributeValue', 'model/BatchOperation', 'model/Entity', 'model/EntityType', 'model/ErrorResponse', 'model/Query', 'model/QueryPattern', 'model/Subscription', '/APIEntryPointApi', '/AttributeValueApi', '/AttributesApi', '/BatchOperationsApi', '/EntitiesApi', '/SubscriptionsApi', '/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Attribute'), require('./model/AttributeValue'), require('./model/BatchOperation'), require('./model/Entity'), require('./model/EntityType'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/QueryPattern'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Attribute'), require('./model/AttributeValue'), require('./model/BatchOperation'), require('./model/Entity'), require('./model/EntityType'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/QueryPattern'), require('./model/Subscription'), require('.//APIEntryPointApi'), require('.//AttributeValueApi'), require('.//AttributesApi'), require('.//BatchOperationsApi'), require('.//EntitiesApi'), require('.//SubscriptionsApi'), require('.//TypesApi'));
   }
 }(function(ApiClient, APIEntryPoint, Attribute, AttributeValue, BatchOperation, Entity, EntityType, ErrorResponse, Query, QueryPattern, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
-   * NGSI_V2_API_description_in_Swagger.<br>
+   * Javascript Client for NGSI v2.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -62,7 +62,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version v2
+   * @version 0.1.0
    */
   var exports = {
     /**
@@ -122,37 +122,37 @@
     Subscription: Subscription,
     /**
      * The APIEntryPointApi service constructor.
-     * @property {module:api/APIEntryPointApi}
+     * @property {module:/APIEntryPointApi}
      */
     APIEntryPointApi: APIEntryPointApi,
     /**
      * The AttributeValueApi service constructor.
-     * @property {module:api/AttributeValueApi}
+     * @property {module:/AttributeValueApi}
      */
     AttributeValueApi: AttributeValueApi,
     /**
      * The AttributesApi service constructor.
-     * @property {module:api/AttributesApi}
+     * @property {module:/AttributesApi}
      */
     AttributesApi: AttributesApi,
     /**
      * The BatchOperationsApi service constructor.
-     * @property {module:api/BatchOperationsApi}
+     * @property {module:/BatchOperationsApi}
      */
     BatchOperationsApi: BatchOperationsApi,
     /**
      * The EntitiesApi service constructor.
-     * @property {module:api/EntitiesApi}
+     * @property {module:/EntitiesApi}
      */
     EntitiesApi: EntitiesApi,
     /**
      * The SubscriptionsApi service constructor.
-     * @property {module:api/SubscriptionsApi}
+     * @property {module:/SubscriptionsApi}
      */
     SubscriptionsApi: SubscriptionsApi,
     /**
      * The TypesApi service constructor.
-     * @property {module:api/TypesApi}
+     * @property {module:/TypesApi}
      */
     TypesApi: TypesApi
   };
