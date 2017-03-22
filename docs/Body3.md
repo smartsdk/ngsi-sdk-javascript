@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **entities** | **[Object]** |  | [optional] 
+**attributes** | **[String]** |  | [optional] 
 
 

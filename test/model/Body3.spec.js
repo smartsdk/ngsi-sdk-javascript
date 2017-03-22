@@ -71,6 +71,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property attributes (base name: "attributes")', function() {
+      // uncomment below and update the code to test the property attributes
+      //var instane = new NgsiV2.Body3();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

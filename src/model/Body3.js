@@ -57,6 +57,7 @@
     var _this = this;
 
 
+
   };
 
   /**
@@ -73,6 +74,9 @@
       if (data.hasOwnProperty('entities')) {
         obj['entities'] = ApiClient.convertToType(data['entities'], [Object]);
       }
+      if (data.hasOwnProperty('attributes')) {
+        obj['attributes'] = ApiClient.convertToType(data['attributes'], ['String']);
+      }
     }
     return obj;
   }
@@ -81,6 +85,10 @@
    * @member {Array.<Object>} entities
    */
   exports.prototype['entities'] = undefined;
+  /**
+   * @member {Array.<String>} attributes
+   */
+  exports.prototype['attributes'] = undefined;
 
 
 
