@@ -379,9 +379,9 @@
       if(contentType != 'multipart/form-data') {
         request.type(contentType);
       }
-    } else if (!request.header['Content-Type']) {
-      request.type('application/json');
-    }
+    }// else if (!request.header['Content-Type']) {
+     // request.type('application/json');
+    //}
 
     if (contentType === 'application/x-www-form-urlencoded') {
       request.send(this.normalizeParams(formParams));
@@ -454,10 +454,10 @@
         if (type === Object) {
           // generic object, return directly
           return data;
-        } else if (typeof type === 'function') {
+        } /* else if (typeof type === 'function') {
           // for model type like: User
           return type.constructFromObject(data);
-        } else if (Array.isArray(type)) {
+        } */ else if (Array.isArray(type)) {
           // for array type like: ['String']
           var itemType = type[0];
           return data.map(function(item) {
