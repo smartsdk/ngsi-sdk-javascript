@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/APIEntryPoint', 'model/BatchOperation', 'model/Entity', 'model/ErrorResponse', 'model/Query', 'model/QueryPattern', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/Attribute', 'model/BatchOperation', 'model/Entity', 'model/ErrorResponse', 'model/Query', 'model/QueryPattern', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/BatchOperation'), require('./model/Entity'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/QueryPattern'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Attribute'), require('./model/BatchOperation'), require('./model/Entity'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/QueryPattern'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, APIEntryPoint, BatchOperation, Entity, ErrorResponse, Query, QueryPattern, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, APIEntryPoint, Attribute, BatchOperation, Entity, ErrorResponse, Query, QueryPattern, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -75,6 +75,11 @@
      * @property {module:model/APIEntryPoint}
      */
     APIEntryPoint: APIEntryPoint,
+    /**
+     * The Attribute model constructor.
+     * @property {module:model/Attribute}
+     */
+    Attribute: Attribute,
     /**
      * The BatchOperation model constructor.
      * @property {module:model/BatchOperation}
