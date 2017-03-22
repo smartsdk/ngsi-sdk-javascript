@@ -392,7 +392,7 @@
     /**
      * The request payload is an object representing the attributes to update. The object follows the JSON entity representation format (described in \&quot;JSON Entity Representation\&quot; section), except that &#x60;id&#x60; and &#x60;type&#x60; are not allowed. The entity attributes are updated with the ones in the payload. In addition to that, if one or more attributes in the payload doesn&#39;t exist in the entity, an error is returned. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityId Id of the entity to be updated
-     * @param {Object} body 
+     * @param {module:model/Attribute} body JSON Attribute Representation
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {module:model/String} opts.options Operations options
@@ -448,7 +448,7 @@
     /**
      * The request payload is an object representing the attributes to append or update. The object follows the JSON entity representation format (described in \&quot;JSON Entity Representation\&quot; section), except that &#x60;id&#x60; and &#x60;type&#x60; are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the &#x60;append&#x60; operation option is used or not. * If &#x60;append&#x60; is not used: the entity attributes are updated (if they previously exist) or appended   (if they don&#39;t previously exist) with the ones in the payload. * If &#x60;append&#x60; is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityId Entity id to be updated
-     * @param {Object} body 
+     * @param {module:model/Attribute} body JSON Attribute Representation
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {module:model/String} opts.options Operations options

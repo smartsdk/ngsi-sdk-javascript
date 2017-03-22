@@ -366,7 +366,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be updated
 
-var body = null; // Object | 
+var body = new NgsiV2.Attribute(); // Attribute | JSON Attribute Representation
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -388,7 +388,7 @@ apiInstance.updateExistingEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to be updated | 
- **body** | **Object**|  | 
+ **body** | [**Attribute**](Attribute.md)| JSON Attribute Representation | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 
@@ -421,7 +421,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Entity id to be updated
 
-var body = null; // Object | 
+var body = new NgsiV2.Attribute(); // Attribute | JSON Attribute Representation
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
@@ -443,7 +443,7 @@ apiInstance.updateOrAppendEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Entity id to be updated | 
- **body** | **Object**|  | 
+ **body** | [**Attribute**](Attribute.md)| JSON Attribute Representation | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 
