@@ -66,7 +66,7 @@ No authorization required
 
 <a name="listEntities"></a>
 # **listEntities**
-> [Object] listEntities(opts)
+> [Entity] listEntities(opts)
 
 
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**[Entity]**](Entity.md)
 
 ### Authorization
 
