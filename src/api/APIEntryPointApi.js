@@ -84,7 +84,7 @@
 
       var authNames = ['fiware_token'];
       var contentTypes = [];
-      var accepts = [];
+      var accepts = ['application/json'];
       var returnType = APIEntryPoint;
 
       return this.apiClient.callApi(
