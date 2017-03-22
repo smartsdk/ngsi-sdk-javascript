@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * AttributeValue service.
-   * @module api/AttributeValueApi
-   * @version v2
+   * @module /AttributeValueApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new AttributeValueApi. 
-   * @alias module:api/AttributeValueApi
+   * @alias module:/AttributeValueApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the getAttributeValue operation.
-     * @callback module:api/AttributeValueApi~getAttributeValueCallback
+     * @callback module:/AttributeValueApi~getAttributeValueCallback
      * @param {String} error Error message, if any.
      * @param {module:model/AttributeValue} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -70,7 +70,7 @@
      * @param {String} attrName Name of the attribute to be retrieved.
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
-     * @param {module:api/AttributeValueApi~getAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/AttributeValueApi~getAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AttributeValue}
      */
     this.getAttributeValue = function(entityId, attrName, opts, callback) {
@@ -114,7 +114,7 @@
 
     /**
      * Callback function to receive the result of the updateAttributeValue operation.
-     * @callback module:api/AttributeValueApi~updateAttributeValueCallback
+     * @callback module:/AttributeValueApi~updateAttributeValueCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -127,7 +127,7 @@
      * @param {module:model/AttributeValue} body JSON AttributeValue Representation
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
-     * @param {module:api/AttributeValueApi~updateAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/AttributeValueApi~updateAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateAttributeValue = function(entityId, attrName, body, opts, callback) {
       opts = opts || {};
@@ -162,7 +162,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json', 'plain/text'];
       var accepts = ['application/json'];
       var returnType = null;
 

@@ -37,7 +37,6 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var body = new NgsiV2.Entity(); // Entity | JSON Entity Representation
 
-
 var opts = { 
   'options': "options_example" // String | Options dictionary
 };
@@ -56,7 +55,7 @@ apiInstance.createEntity(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Entity**](Entity.md)| JSON Entity Representation |
+ **body** | [**Entity**](Entity.md)| JSON Entity Representation | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -69,7 +68,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="listEntities"></a>
@@ -268,7 +267,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="retrieveEntity"></a>
@@ -350,6 +349,7 @@ var fiware_token = defaultClient.authentications['fiware_token'];
 fiware_token.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //fiware_token.apiKeyPrefix = 'Token';
+
 var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity to be retrieved
@@ -451,7 +451,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="updateOrAppendEntityAttributes"></a>
@@ -513,6 +513,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

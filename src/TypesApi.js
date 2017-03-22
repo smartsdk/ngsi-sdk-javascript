@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * Types service.
-   * @module api/TypesApi
-   * @version v2
+   * @module /TypesApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new TypesApi. 
-   * @alias module:api/TypesApi
+   * @alias module:/TypesApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the retrieveEntityType operation.
-     * @callback module:api/TypesApi~retrieveEntityTypeCallback
+     * @callback module:/TypesApi~retrieveEntityTypeCallback
      * @param {String} error Error message, if any.
      * @param {module:model/EntityType} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -67,7 +67,7 @@
     /**
      * This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityType Entity Type
-     * @param {module:api/TypesApi~retrieveEntityTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/TypesApi~retrieveEntityTypeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EntityType}
      */
     this.retrieveEntityType = function(entityType, callback) {
@@ -93,6 +93,7 @@
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = EntityType;
+
       return this.apiClient.callApi(
         '/types/{entityType}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -102,10 +103,9 @@
 
     /**
      * Callback function to receive the result of the retrieveEntityTypes operation.
-     * @callback module:api/TypesApi~retrieveEntityTypesCallback
+     * @callback module:/TypesApi~retrieveEntityTypesCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/EntityType>} data The data returned by the service call.
-     * @param {Array.<module:model/RetrieveEntityTypesResponse>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -115,7 +115,7 @@
      * @param {Number} opts.limit Limit the number of types to be retrieved.
      * @param {Number} opts.offset Skip a number of records.
      * @param {module:model/String} opts.options Options dictionary.
-     * @param {module:api/TypesApi~retrieveEntityTypesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/TypesApi~retrieveEntityTypesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/EntityType>}
      */
     this.retrieveEntityTypes = function(opts, callback) {

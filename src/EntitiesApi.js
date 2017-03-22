@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * Entities service.
-   * @module api/EntitiesApi
-   * @version v2
+   * @module /EntitiesApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new EntitiesApi. 
-   * @alias module:api/EntitiesApi
+   * @alias module:/EntitiesApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the createEntity operation.
-     * @callback module:api/EntitiesApi~createEntityCallback
+     * @callback module:/EntitiesApi~createEntityCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -69,7 +69,7 @@
      * @param {module:model/Entity} body JSON Entity Representation
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/EntitiesApi~createEntityCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~createEntityCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.createEntity = function(body, opts, callback) {
       opts = opts || {};
@@ -92,7 +92,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -105,7 +105,7 @@
 
     /**
      * Callback function to receive the result of the listEntities operation.
-     * @callback module:api/EntitiesApi~listEntitiesCallback
+     * @callback module:/EntitiesApi~listEntitiesCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/Entity>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -128,7 +128,7 @@
      * @param {String} opts.attrs Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order.
      * @param {String} opts.orderBy Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details.
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/EntitiesApi~listEntitiesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~listEntitiesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Entity>}
      */
     this.listEntities = function(opts, callback) {
@@ -173,7 +173,7 @@
 
     /**
      * Callback function to receive the result of the removeEntity operation.
-     * @callback module:api/EntitiesApi~removeEntityCallback
+     * @callback module:/EntitiesApi~removeEntityCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -184,7 +184,7 @@
      * @param {String} entityId Id of the entity to be deleted
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
-     * @param {module:api/EntitiesApi~removeEntityCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~removeEntityCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.removeEntity = function(entityId, opts, callback) {
       opts = opts || {};
@@ -221,7 +221,7 @@
 
     /**
      * Callback function to receive the result of the replaceAllEntityAttributes operation.
-     * @callback module:api/EntitiesApi~replaceAllEntityAttributesCallback
+     * @callback module:/EntitiesApi~replaceAllEntityAttributesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -234,7 +234,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:model/String} opts.options Operations options
-     * @param {module:api/EntitiesApi~replaceAllEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~replaceAllEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.replaceAllEntityAttributes = function(entityId, body, opts, callback) {
       opts = opts || {};
@@ -264,7 +264,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -277,7 +277,7 @@
 
     /**
      * Callback function to receive the result of the retrieveEntity operation.
-     * @callback module:api/EntitiesApi~retrieveEntityCallback
+     * @callback module:/EntitiesApi~retrieveEntityCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -290,7 +290,7 @@
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {String} opts.attrs Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/EntitiesApi~retrieveEntityCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~retrieveEntityCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Entity}
      */
     this.retrieveEntity = function(entityId, opts, callback) {
@@ -330,7 +330,7 @@
 
     /**
      * Callback function to receive the result of the retrieveEntityAttributes operation.
-     * @callback module:api/EntitiesApi~retrieveEntityAttributesCallback
+     * @callback module:/EntitiesApi~retrieveEntityAttributesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Attribute} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -343,7 +343,7 @@
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {String} opts.attrs Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/EntitiesApi~retrieveEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~retrieveEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Attribute}
      */
     this.retrieveEntityAttributes = function(entityId, opts, callback) {
@@ -383,7 +383,7 @@
 
     /**
      * Callback function to receive the result of the updateExistingEntityAttributes operation.
-     * @callback module:api/EntitiesApi~updateExistingEntityAttributesCallback
+     * @callback module:/EntitiesApi~updateExistingEntityAttributesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -396,7 +396,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {module:model/String} opts.options Operations options
-     * @param {module:api/EntitiesApi~updateExistingEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~updateExistingEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateExistingEntityAttributes = function(entityId, body, opts, callback) {
       opts = opts || {};
@@ -426,7 +426,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -439,7 +439,7 @@
 
     /**
      * Callback function to receive the result of the updateOrAppendEntityAttributes operation.
-     * @callback module:api/EntitiesApi~updateOrAppendEntityAttributesCallback
+     * @callback module:/EntitiesApi~updateOrAppendEntityAttributesCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -452,7 +452,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
      * @param {module:model/String} opts.options Operations options
-     * @param {module:api/EntitiesApi~updateOrAppendEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/EntitiesApi~updateOrAppendEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateOrAppendEntityAttributes = function(entityId, body, opts, callback) {
       opts = opts || {};
@@ -482,7 +482,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 

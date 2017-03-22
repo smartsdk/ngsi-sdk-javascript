@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * Subscriptions service.
-   * @module api/SubscriptionsApi
-   * @version v2
+   * @module /SubscriptionsApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new SubscriptionsApi. 
-   * @alias module:api/SubscriptionsApi
+   * @alias module:/SubscriptionsApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the createANewSubscription operation.
-     * @callback module:api/SubscriptionsApi~createANewSubscriptionCallback
+     * @callback module:/SubscriptionsApi~createANewSubscriptionCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -67,7 +67,7 @@
     /**
      * Creates a new subscription. The subscription is represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 201 Created * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {module:model/Subscription} body 
-     * @param {module:api/SubscriptionsApi~createANewSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/SubscriptionsApi~createANewSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.createANewSubscription = function(body, callback) {
       var postBody = body;
@@ -88,7 +88,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 
@@ -101,7 +101,7 @@
 
     /**
      * Callback function to receive the result of the deleteSubscription operation.
-     * @callback module:api/SubscriptionsApi~deleteSubscriptionCallback
+     * @callback module:/SubscriptionsApi~deleteSubscriptionCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -110,7 +110,7 @@
     /**
      * Cancels subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
-     * @param {module:api/SubscriptionsApi~deleteSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/SubscriptionsApi~deleteSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.deleteSubscription = function(subscriptionId, callback) {
       var postBody = null;
@@ -145,7 +145,7 @@
 
     /**
      * Callback function to receive the result of the retrieveSubscription operation.
-     * @callback module:api/SubscriptionsApi~retrieveSubscriptionCallback
+     * @callback module:/SubscriptionsApi~retrieveSubscriptionCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Subscription} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -154,7 +154,7 @@
     /**
      * The response is the subscription represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
-     * @param {module:api/SubscriptionsApi~retrieveSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/SubscriptionsApi~retrieveSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
      */
     this.retrieveSubscription = function(subscriptionId, callback) {
@@ -190,7 +190,7 @@
 
     /**
      * Callback function to receive the result of the retrieveSubscriptions operation.
-     * @callback module:api/SubscriptionsApi~retrieveSubscriptionsCallback
+     * @callback module:/SubscriptionsApi~retrieveSubscriptionsCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/Subscription>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -202,7 +202,7 @@
      * @param {Number} opts.limit Limit the number of types to be retrieved
      * @param {Number} opts.offset Skip a number of records
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/SubscriptionsApi~retrieveSubscriptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/SubscriptionsApi~retrieveSubscriptionsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Subscription>}
      */
     this.retrieveSubscriptions = function(opts, callback) {
@@ -236,7 +236,7 @@
 
     /**
      * Callback function to receive the result of the updateSubscription operation.
-     * @callback module:api/SubscriptionsApi~updateSubscriptionCallback
+     * @callback module:/SubscriptionsApi~updateSubscriptionCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -246,7 +246,7 @@
      * Only the fields included in the request are updated in the subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
      * @param {module:model/Subscription} body 
-     * @param {module:api/SubscriptionsApi~updateSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/SubscriptionsApi~updateSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateSubscription = function(subscriptionId, body, callback) {
       var postBody = body;
@@ -273,7 +273,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 

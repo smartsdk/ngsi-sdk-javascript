@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -45,7 +45,7 @@
   /**
    * The Subscription model module.
    * @module model/Subscription
-   * @version v2
+   * @version 0.1.0
    */
 
   /**

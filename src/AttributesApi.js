@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * Attributes service.
-   * @module api/AttributesApi
-   * @version v2
+   * @module /AttributesApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new AttributesApi. 
-   * @alias module:api/AttributesApi
+   * @alias module:/AttributesApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the getAttributeData operation.
-     * @callback module:api/AttributesApi~getAttributeDataCallback
+     * @callback module:/AttributesApi~getAttributeDataCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -70,7 +70,7 @@
      * @param {String} attrName Name of the attribute to be retrieved.
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
-     * @param {module:api/AttributesApi~getAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/AttributesApi~getAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Entity}
      */
     this.getAttributeData = function(entityId, attrName, opts, callback) {
@@ -114,7 +114,7 @@
 
     /**
      * Callback function to receive the result of the removeASingleAttribute operation.
-     * @callback module:api/AttributesApi~removeASingleAttributeCallback
+     * @callback module:/AttributesApi~removeASingleAttributeCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -126,7 +126,7 @@
      * @param {String} attrName Attribute name.
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
-     * @param {module:api/AttributesApi~removeASingleAttributeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/AttributesApi~removeASingleAttributeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.removeASingleAttribute = function(entityId, attrName, opts, callback) {
       opts = opts || {};
@@ -169,7 +169,7 @@
 
     /**
      * Callback function to receive the result of the updateAttributeData operation.
-     * @callback module:api/AttributesApi~updateAttributeDataCallback
+     * @callback module:/AttributesApi~updateAttributeDataCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -182,7 +182,7 @@
      * @param {Object} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in case there are several entities with the same entity id.
-     * @param {module:api/AttributesApi~updateAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/AttributesApi~updateAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateAttributeData = function(entityId, attrName, body, opts, callback) {
       opts = opts || {};
@@ -217,7 +217,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 

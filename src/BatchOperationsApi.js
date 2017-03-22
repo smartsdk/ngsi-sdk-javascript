@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * BatchOperations service.
-   * @module api/BatchOperationsApi
-   * @version v2
+   * @module /BatchOperationsApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new BatchOperationsApi. 
-   * @alias module:api/BatchOperationsApi
+   * @alias module:/BatchOperationsApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the query operation.
-     * @callback module:api/BatchOperationsApi~queryCallback
+     * @callback module:/BatchOperationsApi~queryCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -72,7 +72,7 @@
      * @param {Number} opts.offset Skip a number of records.
      * @param {String} opts.orderBy Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details.
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/BatchOperationsApi~queryCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/BatchOperationsApi~queryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
     this.query = function(body, opts, callback) {
@@ -99,7 +99,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = [Object];
 
@@ -112,7 +112,7 @@
 
     /**
      * Callback function to receive the result of the update operation.
-     * @callback module:api/BatchOperationsApi~updateCallback
+     * @callback module:/BatchOperationsApi~updateCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
@@ -121,11 +121,9 @@
     /**
      * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity Representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {module:model/BatchOperation} body 
-     * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/UpdateRequest} body 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
-     * @param {module:api/BatchOperationsApi~updateCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/BatchOperationsApi~updateCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.update = function(body, opts, callback) {
       opts = opts || {};
@@ -148,7 +146,7 @@
       };
 
       var authNames = ['fiware_token'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
 

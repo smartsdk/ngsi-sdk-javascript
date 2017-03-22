@@ -1,6 +1,6 @@
 /**
  * ngsi-v2
- * NGSI V2 API description in Swagger
+ * NGSI V2 API
  *
  * OpenAPI spec version: v2
  * 
@@ -41,13 +41,13 @@
 
   /**
    * APIEntryPoint service.
-   * @module api/APIEntryPointApi
-   * @version v2
+   * @module /APIEntryPointApi
+   * @version 0.1.0
    */
 
   /**
    * Constructs a new APIEntryPointApi. 
-   * @alias module:api/APIEntryPointApi
+   * @alias module:/APIEntryPointApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,7 +58,7 @@
 
     /**
      * Callback function to receive the result of the retrieveAPIResources operation.
-     * @callback module:api/APIEntryPointApi~retrieveAPIResourcesCallback
+     * @callback module:/APIEntryPointApi~retrieveAPIResourcesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/APIEntryPoint} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -66,7 +66,7 @@
 
     /**
      * This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body. It is recommended to follow the “url” link values, [Link](https://tools.ietf.org/html/rfc5988) or Location headers where applicable to retrieve resources. Instead of constructing your own URLs, to keep your client decoupled from implementation details.
-     * @param {module:api/APIEntryPointApi~retrieveAPIResourcesCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:/APIEntryPointApi~retrieveAPIResourcesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/APIEntryPoint}
      */
     this.retrieveAPIResources = function(callback) {
