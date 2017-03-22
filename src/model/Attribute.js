@@ -52,7 +52,7 @@
    * Constructs a new <code>Attribute</code>.
    * @alias module:model/Attribute
    * @class
-   * @param value {String} 
+   * @param value {Object} 
    * @param type {String} 
    * @param metadata {Object} 
    */
@@ -76,7 +76,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('value')) {
-        obj['value'] = ApiClient.convertToType(data['value'], 'String');
+        obj['value'] = ApiClient.convertToType(data['value'], Object);
       }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -89,7 +89,7 @@
   }
 
   /**
-   * @member {String} value
+   * @member {Object} value
    */
   exports.prototype['value'] = undefined;
   /**

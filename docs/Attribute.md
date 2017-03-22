@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **String** |  | 
+**value** | **Object** |  | 
 **type** | **String** |  | 
 **metadata** | **Object** |  | 
 

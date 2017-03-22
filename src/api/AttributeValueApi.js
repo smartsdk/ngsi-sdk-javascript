@@ -102,7 +102,7 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
+      var accepts = ['application/json', 'plain/text'];
       var returnType = Entity;
 
       return this.apiClient.callApi(
@@ -124,7 +124,7 @@
      * The request payload is the new attribute value. * If the request payload MIME type is &#x60;application/json&#x60;, then the value of the attribute is set to   the JSON object or array coded in the payload (if the payload is not a valid JSON document,   then an error is returned). * If the request payload MIME type is &#x60;text/plain&#x60;, then the following algorithm is applied to the   payload:   * If the payload starts and ends with citation-marks (&#x60;\&quot;&#x60;), the value is taken as a string     (the citation marks themselves are not considered part of the string)   * If &#x60;true&#x60; or &#x60;false&#x60;, the value is taken as a boolean.   * If &#x60;null&#x60;, the value is taken as null.   * If these first three tests &#39;fail&#39;, the text is interpreted as a number.   * If not a valid number, then an error is returned and the attribute&#39;s value is unchanged. The payload MIME type in the request is specified in the &#x60;Content-Type&#x60; HTTP header. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityId Id of the entity to be updated.
      * @param {String} attrName Attribute name.
-     * @param {module:model/Entity} body JSON Entity Representationy
+     * @param {module:model/Entity} body JSON Entity Representation
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:api/AttributeValueApi~updateAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
