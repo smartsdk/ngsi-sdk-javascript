@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entities** | **[Object]** |  | [optional] 
+**entities** | [**[OpqueryEntities]**](OpqueryEntities.md) |  | [optional] 
 **attributes** | **[String]** |  | [optional] 
 
 

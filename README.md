@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
  - [NgsiV2.CreateANewSubscriptionRequest](docs/CreateANewSubscriptionRequest.md)
  - [NgsiV2.InlineResponse200](docs/InlineResponse200.md)
  - [NgsiV2.InlineResponse2001](docs/InlineResponse2001.md)
+ - [NgsiV2.OpqueryEntities](docs/OpqueryEntities.md)
  - [NgsiV2.QueryRequest](docs/QueryRequest.md)
  - [NgsiV2.QueryResponse](docs/QueryResponse.md)
  - [NgsiV2.RetrieveSubscriptionResponse](docs/RetrieveSubscriptionResponse.md)
