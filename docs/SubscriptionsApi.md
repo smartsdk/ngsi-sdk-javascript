@@ -22,6 +22,13 @@ Creates a new subscription. The subscription is represented by a JSON object as 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -50,7 +57,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -68,6 +75,13 @@ Cancels subscription. Response: * Successful operation uses 204 No Content * Err
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -96,7 +110,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -114,6 +128,13 @@ The response is the subscription represented by a JSON object as described at th
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -142,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -160,6 +181,13 @@ Returns a list of all the subscriptions present in the system. Response: * Succe
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -193,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -211,6 +239,13 @@ Only the fields included in the request are updated in the subscription. Respons
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -242,7 +277,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
