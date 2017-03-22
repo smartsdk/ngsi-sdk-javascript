@@ -39,7 +39,7 @@ the above steps with Node.js and installing browserify with `npm install -g brow
 perform the following (assuming *main.js* is your entry file):
 
 ```shell
-browserify src/index.js > bundle.js
+browserify js/main.js --require superagent --exports require -o js/ngsi.js
 ```
 
 Then include *bundle.js* in the HTML pages.
