@@ -1,7 +1,7 @@
 {
   "name": "ngsi_v2",
-  "version": "v2",
-  "description": "NGSI_V2_API_description_in_Swagger",
+  "version": "0.1.0",
+  "description": "Javascript Client for NGSI v2",
   "license": "Apache-2.0",
   "main": "src/index.js",
   "scripts": {
