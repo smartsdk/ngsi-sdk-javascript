@@ -203,7 +203,7 @@ var apiInstance = new NgsiV2.EntitiesApi();
 
 var entityId = "entityId_example"; // String | Id of the entity in question.
 
-var body = null; // Object | 
+var body = new NgsiV2.Attribute(); // Attribute | JSON Attribute Representation
 
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
@@ -225,7 +225,7 @@ apiInstance.replaceAllEntityAttributes(entityId, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity in question. | 
- **body** | **Object**|  | 
+ **body** | [**Attribute**](Attribute.md)| JSON Attribute Representation | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
  **options** | **String**| Operations options | [optional] 
 
@@ -298,7 +298,7 @@ No authorization required
 
 <a name="retrieveEntityAttributes"></a>
 # **retrieveEntityAttributes**
-> Entity retrieveEntityAttributes(entityId, opts)
+> Attribute retrieveEntityAttributes(entityId, opts)
 
 
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Entity**](Entity.md)
+[**Attribute**](Attribute.md)
 
 ### Authorization
 
