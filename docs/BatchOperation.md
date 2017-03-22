@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **actionType** | **String** |  | 
-**entities** | **[Object]** |  | 
+**entities** | [**[Entity]**](Entity.md) |  | 
 
 
 <a name="ActionTypeEnum"></a>

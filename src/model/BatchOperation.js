@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/Entity'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Entity'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperation = factory(root.NgsiV2.ApiClient);
+    root.NgsiV2.BatchOperation = factory(root.NgsiV2.ApiClient, root.NgsiV2.Entity);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Entity) {
   'use strict';
 
 
@@ -53,7 +53,7 @@
    * @alias module:model/BatchOperation
    * @class
    * @param actionType {module:model/BatchOperation.ActionTypeEnum} 
-   * @param entities {Array.<Object>} 
+   * @param entities {Array.<module:model/Entity>} 
    */
   var exports = function(actionType, entities) {
     var _this = this;
@@ -77,7 +77,7 @@
         obj['actionType'] = ApiClient.convertToType(data['actionType'], 'String');
       }
       if (data.hasOwnProperty('entities')) {
-        obj['entities'] = ApiClient.convertToType(data['entities'], [Object]);
+        obj['entities'] = ApiClient.convertToType(data['entities'], [Entity]);
       }
     }
     return obj;
@@ -88,7 +88,7 @@
    */
   exports.prototype['actionType'] = undefined;
   /**
-   * @member {Array.<Object>} entities
+   * @member {Array.<module:model/Entity>} entities
    */
   exports.prototype['entities'] = undefined;
 

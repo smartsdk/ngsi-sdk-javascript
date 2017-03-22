@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="retrieveEntityType"></a>
 # **retrieveEntityType**
-> Object retrieveEntityType(entityType)
+> Entity retrieveEntityType(entityType)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**Entity**](Entity.md)
 
 ### Authorization
 

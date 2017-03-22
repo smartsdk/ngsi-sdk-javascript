@@ -60,7 +60,7 @@
      * Callback function to receive the result of the retrieveEntityType operation.
      * @callback module:api/TypesApi~retrieveEntityTypeCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -68,7 +68,7 @@
      * This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityType Entity Type
      * @param {module:api/TypesApi~retrieveEntityTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/Entity}
      */
     this.retrieveEntityType = function(entityType, callback) {
       var postBody = null;
@@ -92,7 +92,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = Entity;
 
       return this.apiClient.callApi(
         '/types/{entityType}', 'GET',
