@@ -52,6 +52,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var NgsiV2 = require('ngsi_v2');
 
+var defaultClient = NgsiV2.ApiClient.instance;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = "YOUR ACCESS TOKEN"
+
 var api = new NgsiV2.APIEntryPointApi()
 
 var callback = function(error, data, response) {

@@ -19,6 +19,11 @@ This operation returns the &#x60;value&#x60; property with the value of the attr
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.AttributeValueApi();
 
@@ -54,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
@@ -72,6 +77,11 @@ The request payload is the new attribute value. * If the request payload MIME ty
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.AttributeValueApi();
 
@@ -110,7 +120,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 

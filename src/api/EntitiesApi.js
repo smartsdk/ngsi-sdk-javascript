@@ -91,7 +91,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -159,7 +159,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = [Entity];
@@ -207,7 +207,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -263,7 +263,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -316,7 +316,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Entity;
@@ -369,7 +369,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Attribute;
@@ -425,7 +425,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
@@ -481,7 +481,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

@@ -100,7 +100,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json', 'plain/text'];
       var returnType = AttributeValue;
@@ -161,7 +161,7 @@
       var formParams = {
       };
 
-      var authNames = [];
+      var authNames = ['fiware_oauth2'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;

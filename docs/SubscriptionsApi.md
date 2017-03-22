@@ -22,6 +22,11 @@ Creates a new subscription. The subscription is represented by a JSON object as 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -50,7 +55,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
@@ -68,6 +73,11 @@ Cancels subscription. Response: * Successful operation uses 204 No Content * Err
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -96,7 +106,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
@@ -114,6 +124,11 @@ The response is the subscription represented by a JSON object as described at th
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -142,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
@@ -160,6 +175,11 @@ Returns a list of all the subscriptions present in the system. Response: * Succe
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -193,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
@@ -211,6 +231,11 @@ Only the fields included in the request are updated in the subscription. Respons
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure OAuth2 access token for authorization: fiware_oauth2
+var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
+fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -242,7 +267,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_oauth2](../README.md#fiware_oauth2)
 
 ### HTTP request headers
 
