@@ -100,8 +100,8 @@ Class | Method | HTTP request | Description
 
  - [NgsiV2.APIEntryPoint](docs/APIEntryPoint.md)
  - [NgsiV2.BatchOperation](docs/BatchOperation.md)
- - [NgsiV2.OpqueryEntities](docs/OpqueryEntities.md)
  - [NgsiV2.Query](docs/Query.md)
+ - [NgsiV2.QueryPattern](docs/QueryPattern.md)
 
 
 ## Documentation for Authorization
