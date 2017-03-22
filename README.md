@@ -100,6 +100,7 @@ Class | Method | HTTP request | Description
 
  - [NgsiV2.APIEntryPoint](docs/APIEntryPoint.md)
  - [NgsiV2.Attribute](docs/Attribute.md)
+ - [NgsiV2.AttributeValue](docs/AttributeValue.md)
  - [NgsiV2.BatchOperation](docs/BatchOperation.md)
  - [NgsiV2.Entity](docs/Entity.md)
  - [NgsiV2.ErrorResponse](docs/ErrorResponse.md)

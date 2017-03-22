@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getAttributeValue"></a>
 # **getAttributeValue**
-> Entity getAttributeValue(entityId, attrName, opts)
+> AttributeValue getAttributeValue(entityId, attrName, opts)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Entity**](Entity.md)
+[**AttributeValue**](AttributeValue.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ var entityId = "entityId_example"; // String | Id of the entity to be updated.
 
 var attrName = "attrName_example"; // String | Attribute name.
 
-var body = new NgsiV2.Entity(); // Entity | JSON Entity Representation
+var body = new NgsiV2.AttributeValue(); // AttributeValue | JSON AttributeValue Representation
 
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to be updated. | 
  **attrName** | **String**| Attribute name. | 
- **body** | [**Entity**](Entity.md)| JSON Entity Representation | 
+ **body** | [**AttributeValue**](AttributeValue.md)| JSON AttributeValue Representation | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
 
 ### Return type
