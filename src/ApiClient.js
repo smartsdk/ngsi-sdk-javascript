@@ -55,15 +55,16 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://orion.lab.fiware.org:1026/v2
+     * @default http://orion.lab.fiware.org:1026/v2
      */
-    this.basePath = 'https://orion.lab.fiware.org:1026/v2'.replace(/\/+$/, '');
+    this.basePath = 'http://orion.lab.fiware.org:1026/v2'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
     this.authentications = {
+      'fiware_token': {type: 'apiKey', 'in': 'header', name: 'X-Auth-Token'}
     };
     /**
      * The default HTTP headers to be included for all API calls.

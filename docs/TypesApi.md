@@ -1,6 +1,6 @@
 # NgsiV2.TypesApi
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,15 +10,22 @@ Method | HTTP request | Description
 
 <a name="retrieveEntityType"></a>
 # **retrieveEntityType**
-> RetrieveEntityTypeResponse retrieveEntityType(entityType)
+> EntityType retrieveEntityType(entityType)
 
 
 
-This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.TypesApi();
 
@@ -43,28 +50,35 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveEntityTypeResponse**](RetrieveEntityTypeResponse.md)
+[**EntityType**](EntityType.md)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="retrieveEntityTypes"></a>
 # **retrieveEntityTypes**
-> [RetrieveEntityTypesResponse] retrieveEntityTypes(opts)
+> [EntityType] retrieveEntityTypes(opts)
 
 
 
-If the &#x60;values&#x60; option is not in use, this operation returns a JSON array with the entity types. Each element is a JSON object with information about the type: * &#x60;type&#x60; : the entity type name. * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. If the &#x60;values&#x60; option is used, the operation returns a JSON array with a list of entity type names as strings. Results are ordered by entity &#x60;type&#x60; in alphabetical order. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+If the &#x60;values&#x60; option is not in use, this operation returns a JSON array with the entity types. Each element is a JSON object with information about the type: * &#x60;type&#x60; : the entity type name. * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. If the &#x60;values&#x60; option is used, the operation returns a JSON array with a list of entity type names as strings. Results are ordered by entity &#x60;type&#x60; in alphabetical order.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.TypesApi();
 
@@ -94,14 +108,14 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RetrieveEntityTypesResponse]**](RetrieveEntityTypesResponse.md)
+[**[EntityType]**](EntityType.md)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

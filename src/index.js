@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateANewSubscriptionRequest', 'model/CreateEntityRequest', 'model/GetAttributeDataResponse', 'model/GetAttributeValueResponse', 'model/ListEntitiesResponse', 'model/QueryRequest', 'model/QueryResponse', 'model/ReplaceAllEntityAttributesRequest', 'model/RetrieveApiResourcesResponse', 'model/RetrieveEntityAttributesResponse', 'model/RetrieveEntityResponse', 'model/RetrieveEntityTypeResponse', 'model/RetrieveEntityTypesResponse', 'model/RetrieveSubscriptionResponse', 'model/RetrieveSubscriptionsResponse', 'model/UpdateAttributeDataRequest', 'model/UpdateAttributeValueRequest', 'model/UpdateExistingEntityAttributesRequest', 'model/UpdateOrAppendEntityAttributesRequest', 'model/UpdateRequest', 'model/UpdateSubscriptionRequest', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/Attribute', 'model/AttributeValue', 'model/BatchOperation', 'model/Entity', 'model/EntityType', 'model/ErrorResponse', 'model/Query', 'model/QueryPattern', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/CreateANewSubscriptionRequest'), require('./model/CreateEntityRequest'), require('./model/GetAttributeDataResponse'), require('./model/GetAttributeValueResponse'), require('./model/ListEntitiesResponse'), require('./model/QueryRequest'), require('./model/QueryResponse'), require('./model/ReplaceAllEntityAttributesRequest'), require('./model/RetrieveApiResourcesResponse'), require('./model/RetrieveEntityAttributesResponse'), require('./model/RetrieveEntityResponse'), require('./model/RetrieveEntityTypeResponse'), require('./model/RetrieveEntityTypesResponse'), require('./model/RetrieveSubscriptionResponse'), require('./model/RetrieveSubscriptionsResponse'), require('./model/UpdateAttributeDataRequest'), require('./model/UpdateAttributeValueRequest'), require('./model/UpdateExistingEntityAttributesRequest'), require('./model/UpdateOrAppendEntityAttributesRequest'), require('./model/UpdateRequest'), require('./model/UpdateSubscriptionRequest'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Attribute'), require('./model/AttributeValue'), require('./model/BatchOperation'), require('./model/Entity'), require('./model/EntityType'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/QueryPattern'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, CreateANewSubscriptionRequest, CreateEntityRequest, GetAttributeDataResponse, GetAttributeValueResponse, ListEntitiesResponse, QueryRequest, QueryResponse, ReplaceAllEntityAttributesRequest, RetrieveApiResourcesResponse, RetrieveEntityAttributesResponse, RetrieveEntityResponse, RetrieveEntityTypeResponse, RetrieveEntityTypesResponse, RetrieveSubscriptionResponse, RetrieveSubscriptionsResponse, UpdateAttributeDataRequest, UpdateAttributeValueRequest, UpdateExistingEntityAttributesRequest, UpdateOrAppendEntityAttributesRequest, UpdateRequest, UpdateSubscriptionRequest, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, APIEntryPoint, Attribute, AttributeValue, BatchOperation, Entity, EntityType, ErrorResponse, Query, QueryPattern, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -71,110 +71,55 @@
      */
     ApiClient: ApiClient,
     /**
-     * The CreateANewSubscriptionRequest model constructor.
-     * @property {module:model/CreateANewSubscriptionRequest}
+     * The APIEntryPoint model constructor.
+     * @property {module:model/APIEntryPoint}
      */
-    CreateANewSubscriptionRequest: CreateANewSubscriptionRequest,
+    APIEntryPoint: APIEntryPoint,
     /**
-     * The CreateEntityRequest model constructor.
-     * @property {module:model/CreateEntityRequest}
+     * The Attribute model constructor.
+     * @property {module:model/Attribute}
      */
-    CreateEntityRequest: CreateEntityRequest,
+    Attribute: Attribute,
     /**
-     * The GetAttributeDataResponse model constructor.
-     * @property {module:model/GetAttributeDataResponse}
+     * The AttributeValue model constructor.
+     * @property {module:model/AttributeValue}
      */
-    GetAttributeDataResponse: GetAttributeDataResponse,
+    AttributeValue: AttributeValue,
     /**
-     * The GetAttributeValueResponse model constructor.
-     * @property {module:model/GetAttributeValueResponse}
+     * The BatchOperation model constructor.
+     * @property {module:model/BatchOperation}
      */
-    GetAttributeValueResponse: GetAttributeValueResponse,
+    BatchOperation: BatchOperation,
     /**
-     * The ListEntitiesResponse model constructor.
-     * @property {module:model/ListEntitiesResponse}
+     * The Entity model constructor.
+     * @property {module:model/Entity}
      */
-    ListEntitiesResponse: ListEntitiesResponse,
+    Entity: Entity,
     /**
-     * The QueryRequest model constructor.
-     * @property {module:model/QueryRequest}
+     * The EntityType model constructor.
+     * @property {module:model/EntityType}
      */
-    QueryRequest: QueryRequest,
+    EntityType: EntityType,
     /**
-     * The QueryResponse model constructor.
-     * @property {module:model/QueryResponse}
+     * The ErrorResponse model constructor.
+     * @property {module:model/ErrorResponse}
      */
-    QueryResponse: QueryResponse,
+    ErrorResponse: ErrorResponse,
     /**
-     * The ReplaceAllEntityAttributesRequest model constructor.
-     * @property {module:model/ReplaceAllEntityAttributesRequest}
+     * The Query model constructor.
+     * @property {module:model/Query}
      */
-    ReplaceAllEntityAttributesRequest: ReplaceAllEntityAttributesRequest,
+    Query: Query,
     /**
-     * The RetrieveApiResourcesResponse model constructor.
-     * @property {module:model/RetrieveApiResourcesResponse}
+     * The QueryPattern model constructor.
+     * @property {module:model/QueryPattern}
      */
-    RetrieveApiResourcesResponse: RetrieveApiResourcesResponse,
+    QueryPattern: QueryPattern,
     /**
-     * The RetrieveEntityAttributesResponse model constructor.
-     * @property {module:model/RetrieveEntityAttributesResponse}
+     * The Subscription model constructor.
+     * @property {module:model/Subscription}
      */
-    RetrieveEntityAttributesResponse: RetrieveEntityAttributesResponse,
-    /**
-     * The RetrieveEntityResponse model constructor.
-     * @property {module:model/RetrieveEntityResponse}
-     */
-    RetrieveEntityResponse: RetrieveEntityResponse,
-    /**
-     * The RetrieveEntityTypeResponse model constructor.
-     * @property {module:model/RetrieveEntityTypeResponse}
-     */
-    RetrieveEntityTypeResponse: RetrieveEntityTypeResponse,
-    /**
-     * The RetrieveEntityTypesResponse model constructor.
-     * @property {module:model/RetrieveEntityTypesResponse}
-     */
-    RetrieveEntityTypesResponse: RetrieveEntityTypesResponse,
-    /**
-     * The RetrieveSubscriptionResponse model constructor.
-     * @property {module:model/RetrieveSubscriptionResponse}
-     */
-    RetrieveSubscriptionResponse: RetrieveSubscriptionResponse,
-    /**
-     * The RetrieveSubscriptionsResponse model constructor.
-     * @property {module:model/RetrieveSubscriptionsResponse}
-     */
-    RetrieveSubscriptionsResponse: RetrieveSubscriptionsResponse,
-    /**
-     * The UpdateAttributeDataRequest model constructor.
-     * @property {module:model/UpdateAttributeDataRequest}
-     */
-    UpdateAttributeDataRequest: UpdateAttributeDataRequest,
-    /**
-     * The UpdateAttributeValueRequest model constructor.
-     * @property {module:model/UpdateAttributeValueRequest}
-     */
-    UpdateAttributeValueRequest: UpdateAttributeValueRequest,
-    /**
-     * The UpdateExistingEntityAttributesRequest model constructor.
-     * @property {module:model/UpdateExistingEntityAttributesRequest}
-     */
-    UpdateExistingEntityAttributesRequest: UpdateExistingEntityAttributesRequest,
-    /**
-     * The UpdateOrAppendEntityAttributesRequest model constructor.
-     * @property {module:model/UpdateOrAppendEntityAttributesRequest}
-     */
-    UpdateOrAppendEntityAttributesRequest: UpdateOrAppendEntityAttributesRequest,
-    /**
-     * The UpdateRequest model constructor.
-     * @property {module:model/UpdateRequest}
-     */
-    UpdateRequest: UpdateRequest,
-    /**
-     * The UpdateSubscriptionRequest model constructor.
-     * @property {module:model/UpdateSubscriptionRequest}
-     */
-    UpdateSubscriptionRequest: UpdateSubscriptionRequest,
+    Subscription: Subscription,
     /**
      * The APIEntryPointApi service constructor.
      * @property {module:api/APIEntryPointApi}

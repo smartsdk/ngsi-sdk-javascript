@@ -1,6 +1,6 @@
 # NgsiV2.AttributeValueApi
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,8 +10,7 @@ Method | HTTP request | Description
 
 <a name="getAttributeValue"></a>
 # **getAttributeValue**
-> GetAttributeValueResponse getAttributeValue(entityId, attrName, opts)
-
+> AttributeValue getAttributeValue(entityId, attrName, opts)
 
 
 This operation returns the &#x60;value&#x60; property with the value of the attribute. * If attribute value is JSON Array or Object:   * If &#x60;Accept&#x60; header can be expanded to &#x60;application/json&#x60; or &#x60;text/plain&#x60; return the value as a JSON with a     response type of application/json or text/plain (whichever is the first in &#x60;Accept&#x60; header or     &#x60;application/json&#x60; in the case of &#x60;Accept: *_/_*&#x60;).   * Else return a HTTP error \&quot;406 Not Acceptable: accepted MIME types: application/json, text/plain\&quot; * If attribute value is a string, number, null or boolean:   * If &#x60;Accept&#x60; header can be expanded to text/plain return the value as text. In case of a string, citation     marks are used at the begining and end.   * Else return a HTTP error \&quot;406 Not Acceptable: accepted MIME types: text/plain\&quot; Response: * Successful operation uses 200 OK. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
@@ -19,6 +18,13 @@ This operation returns the &#x60;value&#x60; property with the value of the attr
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.AttributeValueApi();
 
@@ -50,16 +56,16 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAttributeValueResponse**](GetAttributeValueResponse.md)
+[**AttributeValue**](AttributeValue.md)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, plain/text
 
 <a name="updateAttributeValue"></a>
 # **updateAttributeValue**
@@ -72,6 +78,13 @@ The request payload is the new attribute value. * If the request payload MIME ty
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.AttributeValueApi();
 
@@ -79,8 +92,7 @@ var entityId = "entityId_example"; // String | Id of the entity to be updated.
 
 var attrName = "attrName_example"; // String | Attribute name.
 
-var body = new NgsiV2.UpdateAttributeValueRequest(); // UpdateAttributeValueRequest | 
-
+var body = new NgsiV2.AttributeValue(); // AttributeValue | JSON AttributeValue Representation
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
 };
@@ -101,7 +113,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to be updated. | 
  **attrName** | **String**| Attribute name. | 
- **body** | [**UpdateAttributeValueRequest**](UpdateAttributeValueRequest.md)|  | 
+ **body** | [**AttributeValue**](AttributeValue.md)| JSON AttributeValue Representation | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
 
 ### Return type
@@ -110,10 +122,10 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

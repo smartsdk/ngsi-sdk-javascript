@@ -52,6 +52,13 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var NgsiV2 = require('ngsi_v2');
 
+var defaultClient = NgsiV2.ApiClient.instance;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix['X-Auth-Token'] = "Token"
 var api = new NgsiV2.APIEntryPointApi()
 
 var callback = function(error, data, response) {
@@ -67,7 +74,7 @@ api.retrieveAPIResources(callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -97,31 +104,22 @@ Class | Method | HTTP request | Description
 
 
 ## Documentation for Models
-
- - [NgsiV2.CreateANewSubscriptionRequest](docs/CreateANewSubscriptionRequest.md)
- - [NgsiV2.CreateEntityRequest](docs/CreateEntityRequest.md)
- - [NgsiV2.GetAttributeDataResponse](docs/GetAttributeDataResponse.md)
- - [NgsiV2.GetAttributeValueResponse](docs/GetAttributeValueResponse.md)
- - [NgsiV2.ListEntitiesResponse](docs/ListEntitiesResponse.md)
- - [NgsiV2.QueryRequest](docs/QueryRequest.md)
- - [NgsiV2.QueryResponse](docs/QueryResponse.md)
- - [NgsiV2.ReplaceAllEntityAttributesRequest](docs/ReplaceAllEntityAttributesRequest.md)
- - [NgsiV2.RetrieveApiResourcesResponse](docs/RetrieveApiResourcesResponse.md)
- - [NgsiV2.RetrieveEntityAttributesResponse](docs/RetrieveEntityAttributesResponse.md)
- - [NgsiV2.RetrieveEntityResponse](docs/RetrieveEntityResponse.md)
- - [NgsiV2.RetrieveEntityTypeResponse](docs/RetrieveEntityTypeResponse.md)
- - [NgsiV2.RetrieveEntityTypesResponse](docs/RetrieveEntityTypesResponse.md)
- - [NgsiV2.RetrieveSubscriptionResponse](docs/RetrieveSubscriptionResponse.md)
- - [NgsiV2.RetrieveSubscriptionsResponse](docs/RetrieveSubscriptionsResponse.md)
- - [NgsiV2.UpdateAttributeDataRequest](docs/UpdateAttributeDataRequest.md)
- - [NgsiV2.UpdateAttributeValueRequest](docs/UpdateAttributeValueRequest.md)
- - [NgsiV2.UpdateExistingEntityAttributesRequest](docs/UpdateExistingEntityAttributesRequest.md)
- - [NgsiV2.UpdateOrAppendEntityAttributesRequest](docs/UpdateOrAppendEntityAttributesRequest.md)
- - [NgsiV2.UpdateRequest](docs/UpdateRequest.md)
- - [NgsiV2.UpdateSubscriptionRequest](docs/UpdateSubscriptionRequest.md)
+ - [NgsiV2.APIEntryPoint](docs/APIEntryPoint.md)
+ - [NgsiV2.Attribute](docs/Attribute.md)
+ - [NgsiV2.AttributeValue](docs/AttributeValue.md)
+ - [NgsiV2.BatchOperation](docs/BatchOperation.md)
+ - [NgsiV2.Entity](docs/Entity.md)
+ - [NgsiV2.EntityType](docs/EntityType.md)
+ - [NgsiV2.ErrorResponse](docs/ErrorResponse.md)
+ - [NgsiV2.Query](docs/Query.md)
+ - [NgsiV2.QueryPattern](docs/QueryPattern.md)
+ - [NgsiV2.Subscription](docs/Subscription.md)
 
 
 ## Documentation for Authorization
 
- All endpoints do not require authorization.
+### fiware_token
 
+- **Type**: API key
+- **API key parameter name**: X-Auth-Token
+- **Location**: HTTP header

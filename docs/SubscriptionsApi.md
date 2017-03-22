@@ -1,6 +1,6 @@
 # NgsiV2.SubscriptionsApi
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,10 +22,17 @@ Creates a new subscription. The subscription is represented by a JSON object as 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
-var body = new NgsiV2.CreateANewSubscriptionRequest(); // CreateANewSubscriptionRequest | 
+var body = new NgsiV2.Subscription(); // Subscription | 
 
 
 var callback = function(error, data, response) {
@@ -42,7 +49,7 @@ apiInstance.createANewSubscription(body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateANewSubscriptionRequest**](CreateANewSubscriptionRequest.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  |
 
 ### Return type
 
@@ -50,11 +57,11 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteSubscription"></a>
@@ -68,6 +75,13 @@ Cancels subscription. Response: * Successful operation uses 204 No Content * Err
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -96,16 +110,16 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="retrieveSubscription"></a>
 # **retrieveSubscription**
-> RetrieveSubscriptionResponse retrieveSubscription(subscriptionId)
+> Subscription retrieveSubscription(subscriptionId)
 
 
 
@@ -114,6 +128,13 @@ The response is the subscription represented by a JSON object as described at th
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -138,21 +159,20 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveSubscriptionResponse**](RetrieveSubscriptionResponse.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="retrieveSubscriptions"></a>
 # **retrieveSubscriptions**
-> [RetrieveSubscriptionsResponse] retrieveSubscriptions(opts)
-
+> [Subscription] retrieveSubscriptions(opts)
 
 
 Returns a list of all the subscriptions present in the system. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
@@ -160,6 +180,13 @@ Returns a list of all the subscriptions present in the system. Response: * Succe
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
@@ -189,15 +216,15 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RetrieveSubscriptionsResponse]**](RetrieveSubscriptionsResponse.md)
+[**[Subscription]**](Subscription.md)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateSubscription"></a>
@@ -211,12 +238,19 @@ Only the fields included in the request are updated in the subscription. Respons
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
-var body = new NgsiV2.UpdateSubscriptionRequest(); // UpdateSubscriptionRequest | 
+var body = new NgsiV2.Subscription(); // Subscription | 
 
 
 var callback = function(error, data, response) {
@@ -234,7 +268,7 @@ apiInstance.updateSubscription(subscriptionId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| subscription Id. | 
- **body** | [**UpdateSubscriptionRequest**](UpdateSubscriptionRequest.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  |
 
 ### Return type
 
@@ -242,10 +276,10 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GetAttributeValueResponse', 'model/UpdateAttributeValueRequest'], factory);
+    define(['ApiClient', 'model/AttributeValue', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GetAttributeValueResponse'), require('../model/UpdateAttributeValueRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/AttributeValue'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.AttributeValueApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.GetAttributeValueResponse, root.NgsiV2.UpdateAttributeValueRequest);
+    root.NgsiV2.AttributeValueApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.AttributeValue, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, GetAttributeValueResponse, UpdateAttributeValueRequest) {
+}(this, function(ApiClient, AttributeValue, ErrorResponse) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
      * Callback function to receive the result of the getAttributeValue operation.
      * @callback module:api/AttributeValueApi~getAttributeValueCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetAttributeValueResponse} data The data returned by the service call.
+     * @param {module:model/AttributeValue} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -71,7 +71,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:api/AttributeValueApi~getAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetAttributeValueResponse}
+     * data is of type: {@link module:model/AttributeValue}
      */
     this.getAttributeValue = function(entityId, attrName, opts, callback) {
       opts = opts || {};
@@ -100,10 +100,10 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = GetAttributeValueResponse;
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'plain/text'];
+      var returnType = AttributeValue;
 
       return this.apiClient.callApi(
         '/entities/{entityId}/attrs/{attrName}/value', 'GET',
@@ -124,7 +124,7 @@
      * The request payload is the new attribute value. * If the request payload MIME type is &#x60;application/json&#x60;, then the value of the attribute is set to   the JSON object or array coded in the payload (if the payload is not a valid JSON document,   then an error is returned). * If the request payload MIME type is &#x60;text/plain&#x60;, then the following algorithm is applied to the   payload:   * If the payload starts and ends with citation-marks (&#x60;\&quot;&#x60;), the value is taken as a string     (the citation marks themselves are not considered part of the string)   * If &#x60;true&#x60; or &#x60;false&#x60;, the value is taken as a boolean.   * If &#x60;null&#x60;, the value is taken as null.   * If these first three tests &#39;fail&#39;, the text is interpreted as a number.   * If not a valid number, then an error is returned and the attribute&#39;s value is unchanged. The payload MIME type in the request is specified in the &#x60;Content-Type&#x60; HTTP header. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityId Id of the entity to be updated.
      * @param {String} attrName Attribute name.
-     * @param {module:model/UpdateAttributeValueRequest} body 
+     * @param {module:model/AttributeValue} body JSON AttributeValue Representation
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:api/AttributeValueApi~updateAttributeValueCallback} callback The callback function, accepting three arguments: error, data, response
@@ -161,8 +161,8 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 

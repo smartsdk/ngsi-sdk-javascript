@@ -1,6 +1,6 @@
 # NgsiV2.BatchOperationsApi
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,19 +10,26 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **query**
-> [QueryResponse] query(body, opts)
+> [Object] query(body, opts)
 
 
 
-The response payload is an Array containing one object per matching entity, or an empty array &#x60;[]&#x60; if  no entities are found. The entities follow the JSON entity representation format (described in the section \&quot;JSON Entity Representation\&quot;). The payload may contain the following elements (all of them optional): + &#x60;entities&#x60;: a list of entites to search for. Each element is represented by a JSON object with the   following elements:     + &#x60;id&#x60; or &#x60;idPattern&#x60;: Id or pattern of the affected entities. Both cannot be used at the same       time, but at least one of them must be present.     + &#x60;type&#x60; or &#x60;typePattern&#x60;: Type or type pattern of the entities to search for. Both cannot be used at       the same time. If omitted, it means \&quot;any entity type\&quot;. + &#x60;attributes&#x60;: a list of attribute names to search for. If omitted, it means \&quot;all attributes\&quot;. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+The response payload is an Array containing one object per matching entity, or an empty array &#x60;[]&#x60; if  no entities are found. The entities follow the JSON entity Representation format (described in the section \&quot;JSON Entity Representation\&quot;). The payload may contain the following elements (all of them optional): + &#x60;entities&#x60;: a list of entites to search for. Each element is represented by a JSON object with the   following elements:     + &#x60;id&#x60; or &#x60;idPattern&#x60;: Id or pattern of the affected entities. Both cannot be used at the same       time, but at least one of them must be present.     + &#x60;type&#x60; or &#x60;typePattern&#x60;: Type or type pattern of the entities to search for. Both cannot be used at       the same time. If omitted, it means \&quot;any entity type\&quot;. + &#x60;attributes&#x60;: a list of attribute names to search for. If omitted, it means \&quot;all attributes\&quot;.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.QueryRequest(); // QueryRequest | 
+var body = new NgsiV2.Query(); // Query |
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of entities to be retrieved.
@@ -45,7 +52,7 @@ apiInstance.query(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**QueryRequest**](QueryRequest.md)|  | 
+ **body** | [**Query**](Query.md)|  |
  **limit** | **Number**| Limit the number of entities to be retrieved. | [optional] 
  **offset** | **Number**| Skip a number of records. | [optional] 
  **orderBy** | **String**| Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details. | [optional] 
@@ -53,15 +60,15 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[QueryResponse]**](QueryResponse.md)
+**[Object]**
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="update"></a>
@@ -70,15 +77,22 @@ No authorization required
 
 
 
-This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity Representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.default;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.UpdateRequest(); // UpdateRequest | 
+var body = new NgsiV2.BatchOperation(); // BatchOperation |
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -98,7 +112,7 @@ apiInstance.update(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateRequest**](UpdateRequest.md)|  | 
+ **body** | [**BatchOperation**](BatchOperation.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -107,10 +121,10 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

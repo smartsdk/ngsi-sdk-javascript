@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/RetrieveEntityTypeResponse', 'model/RetrieveEntityTypesResponse'], factory);
+    define(['ApiClient', 'model/EntityType', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/RetrieveEntityTypeResponse'), require('../model/RetrieveEntityTypesResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/EntityType'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.TypesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.RetrieveEntityTypeResponse, root.NgsiV2.RetrieveEntityTypesResponse);
+    root.NgsiV2.TypesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.EntityType, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, RetrieveEntityTypeResponse, RetrieveEntityTypesResponse) {
+}(this, function(ApiClient, EntityType, ErrorResponse) {
   'use strict';
 
   /**
@@ -60,15 +60,15 @@
      * Callback function to receive the result of the retrieveEntityType operation.
      * @callback module:api/TypesApi~retrieveEntityTypeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RetrieveEntityTypeResponse} data The data returned by the service call.
+     * @param {module:model/EntityType} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+     * This operation returns a JSON object with information about the type: * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} entityType Entity Type
      * @param {module:api/TypesApi~retrieveEntityTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RetrieveEntityTypeResponse}
+     * data is of type: {@link module:model/EntityType}
      */
     this.retrieveEntityType = function(entityType, callback) {
       var postBody = null;
@@ -89,11 +89,10 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = RetrieveEntityTypeResponse;
-
+      var returnType = EntityType;
       return this.apiClient.callApi(
         '/types/{entityType}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -105,18 +104,19 @@
      * Callback function to receive the result of the retrieveEntityTypes operation.
      * @callback module:api/TypesApi~retrieveEntityTypesCallback
      * @param {String} error Error message, if any.
+     * @param {Array.<module:model/EntityType>} data The data returned by the service call.
      * @param {Array.<module:model/RetrieveEntityTypesResponse>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * If the &#x60;values&#x60; option is not in use, this operation returns a JSON array with the entity types. Each element is a JSON object with information about the type: * &#x60;type&#x60; : the entity type name. * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. If the &#x60;values&#x60; option is used, the operation returns a JSON array with a list of entity type names as strings. Results are ordered by entity &#x60;type&#x60; in alphabetical order. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+     * If the &#x60;values&#x60; option is not in use, this operation returns a JSON array with the entity types. Each element is a JSON object with information about the type: * &#x60;type&#x60; : the entity type name. * &#x60;attrs&#x60; : the set of attribute names along with all the entities of such type, represented in   a JSON object whose keys are the attribute names and whose values contain information of such   attributes (in particular a list of the types used by attributes with that name along with all the   entities). * &#x60;count&#x60; : the number of entities belonging to that type. If the &#x60;values&#x60; option is used, the operation returns a JSON array with a list of entity type names as strings. Results are ordered by entity &#x60;type&#x60; in alphabetical order.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Limit the number of types to be retrieved.
      * @param {Number} opts.offset Skip a number of records.
      * @param {module:model/String} opts.options Options dictionary.
      * @param {module:api/TypesApi~retrieveEntityTypesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/RetrieveEntityTypesResponse>}
+     * data is of type: {@link Array.<module:model/EntityType>}
      */
     this.retrieveEntityTypes = function(opts, callback) {
       opts = opts || {};
@@ -135,10 +135,10 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [RetrieveEntityTypesResponse];
+      var returnType = [EntityType];
 
       return this.apiClient.callApi(
         '/types/', 'GET',

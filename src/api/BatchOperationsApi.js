@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/QueryRequest', 'model/QueryResponse', 'model/UpdateRequest'], factory);
+    define(['ApiClient', 'model/BatchOperation', 'model/ErrorResponse', 'model/Query'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/QueryRequest'), require('../model/QueryResponse'), require('../model/UpdateRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/BatchOperation'), require('../model/ErrorResponse'), require('../model/Query'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.QueryRequest, root.NgsiV2.QueryResponse, root.NgsiV2.UpdateRequest);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.BatchOperation, root.NgsiV2.ErrorResponse, root.NgsiV2.Query);
   }
-}(this, function(ApiClient, QueryRequest, QueryResponse, UpdateRequest) {
+}(this, function(ApiClient, BatchOperation, ErrorResponse, Query) {
   'use strict';
 
   /**
@@ -60,20 +60,20 @@
      * Callback function to receive the result of the query operation.
      * @callback module:api/BatchOperationsApi~queryCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/QueryResponse>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * The response payload is an Array containing one object per matching entity, or an empty array &#x60;[]&#x60; if  no entities are found. The entities follow the JSON entity representation format (described in the section \&quot;JSON Entity Representation\&quot;). The payload may contain the following elements (all of them optional): + &#x60;entities&#x60;: a list of entites to search for. Each element is represented by a JSON object with the   following elements:     + &#x60;id&#x60; or &#x60;idPattern&#x60;: Id or pattern of the affected entities. Both cannot be used at the same       time, but at least one of them must be present.     + &#x60;type&#x60; or &#x60;typePattern&#x60;: Type or type pattern of the entities to search for. Both cannot be used at       the same time. If omitted, it means \&quot;any entity type\&quot;. + &#x60;attributes&#x60;: a list of attribute names to search for. If omitted, it means \&quot;all attributes\&quot;. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/QueryRequest} body 
+     * The response payload is an Array containing one object per matching entity, or an empty array &#x60;[]&#x60; if  no entities are found. The entities follow the JSON entity Representation format (described in the section \&quot;JSON Entity Representation\&quot;). The payload may contain the following elements (all of them optional): + &#x60;entities&#x60;: a list of entites to search for. Each element is represented by a JSON object with the   following elements:     + &#x60;id&#x60; or &#x60;idPattern&#x60;: Id or pattern of the affected entities. Both cannot be used at the same       time, but at least one of them must be present.     + &#x60;type&#x60; or &#x60;typePattern&#x60;: Type or type pattern of the entities to search for. Both cannot be used at       the same time. If omitted, it means \&quot;any entity type\&quot;. + &#x60;attributes&#x60;: a list of attribute names to search for. If omitted, it means \&quot;all attributes\&quot;.  Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+     * @param {module:model/Query} body 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Limit the number of entities to be retrieved.
      * @param {Number} opts.offset Skip a number of records.
      * @param {String} opts.orderBy Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details.
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/BatchOperationsApi~queryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/QueryResponse>}
+     * data is of type: {@link Array.<Object>}
      */
     this.query = function(body, opts, callback) {
       opts = opts || {};
@@ -98,10 +98,10 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [QueryResponse];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/op/query', 'POST',
@@ -119,6 +119,8 @@
      */
 
     /**
+     * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity Representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+     * @param {module:model/BatchOperation} body 
      * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {module:model/UpdateRequest} body 
      * @param {Object} opts Optional parameters
@@ -145,8 +147,8 @@
       var formParams = {
       };
 
-      var authNames = [];
-      var contentTypes = ['application/json'];
+      var authNames = ['fiware_token'];
+      var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
 
