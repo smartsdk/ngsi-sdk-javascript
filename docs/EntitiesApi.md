@@ -28,7 +28,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.EntitiesApi();
 
-var body = null; // Object | 
+var body = new NgsiV2.Entity(); // Entity | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -48,7 +48,7 @@ apiInstance.createEntity(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **Object**|  | 
+ **body** | [**Entity**](Entity.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type

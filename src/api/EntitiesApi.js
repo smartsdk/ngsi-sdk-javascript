@@ -66,7 +66,7 @@
 
     /**
      * The payload is an object representing the entity to be created. The object follows the JSON entity representation format (described in a \&quot;JSON Entity Representation\&quot; section). Response: * Successful operation uses 201 Created. Reponse includes a &#x60;Location&#x60; header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {Object} body 
+     * @param {module:model/Entity} body 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/EntitiesApi~createEntityCallback} callback The callback function, accepting three arguments: error, data, response
