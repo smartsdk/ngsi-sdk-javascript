@@ -67,7 +67,7 @@ api.retrieveAPIResources(callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
