@@ -89,7 +89,7 @@
       var formParams = {
       };
 
-      var authNames = ['fiware_oauth2'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = EntityType;
@@ -135,7 +135,7 @@
       var formParams = {
       };
 
-      var authNames = ['fiware_oauth2'];
+      var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = [EntityType];

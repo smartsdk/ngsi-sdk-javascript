@@ -20,11 +20,6 @@ Returns a JSON object with the attribute data of the attribute. The object follo
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.AttributesApi();
 
@@ -60,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -78,11 +73,6 @@ Removes an entity attribute. Response: * Successful operation uses 204 No Conten
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.AttributesApi();
 
@@ -118,7 +108,7 @@ null (empty response body)
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -136,11 +126,6 @@ The request payload is an object representing the new attribute data. Previous a
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.AttributesApi();
 
@@ -179,7 +164,7 @@ null (empty response body)
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 

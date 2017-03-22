@@ -19,11 +19,6 @@ This operation returns a JSON object with information about the type: * &#x60;at
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.TypesApi();
 
@@ -52,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -70,11 +65,6 @@ If the &#x60;values&#x60; option is not in use, this operation returns a JSON ar
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.TypesApi();
 
@@ -108,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 

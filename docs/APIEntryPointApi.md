@@ -18,11 +18,6 @@ This resource does not have any attributes. Instead it offers the initial API af
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.APIEntryPointApi();
 
@@ -45,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 

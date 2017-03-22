@@ -19,11 +19,6 @@ The response payload is an Array containing one object per matching entity, or a
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
@@ -62,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,11 +75,6 @@ This operation allows to create, update and/or delete several entities in a sing
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
-
-// Configure OAuth2 access token for authorization: fiware_oauth2
-var fiware_oauth2 = defaultClient.authentications['fiware_oauth2'];
-fiware_oauth2.accessToken = 'YOUR ACCESS TOKEN';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
@@ -117,7 +107,7 @@ null (empty response body)
 
 ### Authorization
 
-[fiware_oauth2](../README.md#fiware_oauth2)
+No authorization required
 
 ### HTTP request headers
 
