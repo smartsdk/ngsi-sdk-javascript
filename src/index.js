@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/APIEntryPoint', 'model/Body', 'model/Body1', 'model/Body2', 'model/Body3', 'model/InlineResponse200', 'model/OpqueryEntities', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/Operation', 'model/OpqueryEntities', 'model/Query', 'model/Subscription', 'model/Subscription1', 'model/Subscription2', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Body'), require('./model/Body1'), require('./model/Body2'), require('./model/Body3'), require('./model/InlineResponse200'), require('./model/OpqueryEntities'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Operation'), require('./model/OpqueryEntities'), require('./model/Query'), require('./model/Subscription'), require('./model/Subscription1'), require('./model/Subscription2'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, APIEntryPoint, Body, Body1, Body2, Body3, InlineResponse200, OpqueryEntities, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, APIEntryPoint, Operation, OpqueryEntities, Query, Subscription, Subscription1, Subscription2, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -76,35 +76,35 @@
      */
     APIEntryPoint: APIEntryPoint,
     /**
-     * The Body model constructor.
-     * @property {module:model/Body}
+     * The Operation model constructor.
+     * @property {module:model/Operation}
      */
-    Body: Body,
-    /**
-     * The Body1 model constructor.
-     * @property {module:model/Body1}
-     */
-    Body1: Body1,
-    /**
-     * The Body2 model constructor.
-     * @property {module:model/Body2}
-     */
-    Body2: Body2,
-    /**
-     * The Body3 model constructor.
-     * @property {module:model/Body3}
-     */
-    Body3: Body3,
-    /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200: InlineResponse200,
+    Operation: Operation,
     /**
      * The OpqueryEntities model constructor.
      * @property {module:model/OpqueryEntities}
      */
     OpqueryEntities: OpqueryEntities,
+    /**
+     * The Query model constructor.
+     * @property {module:model/Query}
+     */
+    Query: Query,
+    /**
+     * The Subscription model constructor.
+     * @property {module:model/Subscription}
+     */
+    Subscription: Subscription,
+    /**
+     * The Subscription1 model constructor.
+     * @property {module:model/Subscription1}
+     */
+    Subscription1: Subscription1,
+    /**
+     * The Subscription2 model constructor.
+     * @property {module:model/Subscription2}
+     */
+    Subscription2: Subscription2,
     /**
      * The APIEntryPointApi service constructor.
      * @property {module:api/APIEntryPointApi}

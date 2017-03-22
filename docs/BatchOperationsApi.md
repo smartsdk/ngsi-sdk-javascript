@@ -22,7 +22,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.Body3(); // Body3 | 
+var body = new NgsiV2.Query(); // Query | 
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of entities to be retrieved.
@@ -45,7 +45,7 @@ apiInstance.query(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body3**](Body3.md)|  | 
+ **body** | [**Query**](Query.md)|  | 
  **limit** | **Number**| Limit the number of entities to be retrieved. | [optional] 
  **offset** | **Number**| Skip a number of records. | [optional] 
  **orderBy** | **String**| Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details. | [optional] 
@@ -78,7 +78,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.Body2(); // Body2 | 
+var body = new NgsiV2.Operation(); // Operation | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -98,7 +98,7 @@ apiInstance.update(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body2**](Body2.md)|  | 
+ **body** | [**Operation**](Operation.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type

@@ -25,7 +25,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
-var body = new NgsiV2.Body(); // Body | 
+var body = new NgsiV2.Subscription1(); // Subscription1 | 
 
 
 var callback = function(error, data, response) {
@@ -42,7 +42,7 @@ apiInstance.createANewSubscription(body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)|  | 
+ **body** | [**Subscription1**](Subscription1.md)|  | 
 
 ### Return type
 
@@ -105,7 +105,7 @@ No authorization required
 
 <a name="retrieveSubscription"></a>
 # **retrieveSubscription**
-> InlineResponse200 retrieveSubscription(subscriptionId)
+> Subscription retrieveSubscription(subscriptionId)
 
 
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ No authorization required
 
 <a name="retrieveSubscriptions"></a>
 # **retrieveSubscriptions**
-> [InlineResponse200] retrieveSubscriptions(opts)
+> [Subscription] retrieveSubscriptions(opts)
 
 
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse200]**](InlineResponse200.md)
+[**[Subscription]**](Subscription.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
-var body = new NgsiV2.Body1(); // Body1 | 
+var body = new NgsiV2.Subscription2(); // Subscription2 | 
 
 
 var callback = function(error, data, response) {
@@ -234,7 +234,7 @@ apiInstance.updateSubscription(subscriptionId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| subscription Id. | 
- **body** | [**Body1**](Body1.md)|  | 
+ **body** | [**Subscription2**](Subscription2.md)|  | 
 
 ### Return type
 
