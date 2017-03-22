@@ -99,12 +99,10 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [NgsiV2.APIEntryPoint](docs/APIEntryPoint.md)
- - [NgsiV2.Operation](docs/Operation.md)
+ - [NgsiV2.BatchOperation](docs/BatchOperation.md)
  - [NgsiV2.OpqueryEntities](docs/OpqueryEntities.md)
  - [NgsiV2.Query](docs/Query.md)
  - [NgsiV2.Subscription](docs/Subscription.md)
- - [NgsiV2.Subscription1](docs/Subscription1.md)
- - [NgsiV2.Subscription2](docs/Subscription2.md)
 
 
 ## Documentation for Authorization

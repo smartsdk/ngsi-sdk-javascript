@@ -25,7 +25,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
-var body = new NgsiV2.Subscription1(); // Subscription1 | 
+var body = new NgsiV2.Subscription(); // Subscription | 
 
 
 var callback = function(error, data, response) {
@@ -42,7 +42,7 @@ apiInstance.createANewSubscription(body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Subscription1**](Subscription1.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  | 
 
 ### Return type
 
@@ -216,7 +216,7 @@ var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
-var body = new NgsiV2.Subscription2(); // Subscription2 | 
+var body = new NgsiV2.Subscription(); // Subscription | 
 
 
 var callback = function(error, data, response) {
@@ -234,7 +234,7 @@ apiInstance.updateSubscription(subscriptionId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| subscription Id. | 
- **body** | [**Subscription2**](Subscription2.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  | 
 
 ### Return type
 

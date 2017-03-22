@@ -78,7 +78,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.Operation(); // Operation | 
+var body = new NgsiV2.BatchOperation(); // BatchOperation | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -98,7 +98,7 @@ apiInstance.update(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Operation**](Operation.md)|  | 
+ **body** | [**BatchOperation**](BatchOperation.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type

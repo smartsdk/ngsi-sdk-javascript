@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/APIEntryPoint', 'model/Operation', 'model/OpqueryEntities', 'model/Query', 'model/Subscription', 'model/Subscription1', 'model/Subscription2', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/BatchOperation', 'model/OpqueryEntities', 'model/Query', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/Operation'), require('./model/OpqueryEntities'), require('./model/Query'), require('./model/Subscription'), require('./model/Subscription1'), require('./model/Subscription2'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/BatchOperation'), require('./model/OpqueryEntities'), require('./model/Query'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, APIEntryPoint, Operation, OpqueryEntities, Query, Subscription, Subscription1, Subscription2, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, APIEntryPoint, BatchOperation, OpqueryEntities, Query, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -76,10 +76,10 @@
      */
     APIEntryPoint: APIEntryPoint,
     /**
-     * The Operation model constructor.
-     * @property {module:model/Operation}
+     * The BatchOperation model constructor.
+     * @property {module:model/BatchOperation}
      */
-    Operation: Operation,
+    BatchOperation: BatchOperation,
     /**
      * The OpqueryEntities model constructor.
      * @property {module:model/OpqueryEntities}
@@ -95,16 +95,6 @@
      * @property {module:model/Subscription}
      */
     Subscription: Subscription,
-    /**
-     * The Subscription1 model constructor.
-     * @property {module:model/Subscription1}
-     */
-    Subscription1: Subscription1,
-    /**
-     * The Subscription2 model constructor.
-     * @property {module:model/Subscription2}
-     */
-    Subscription2: Subscription2,
     /**
      * The APIEntryPointApi service constructor.
      * @property {module:api/APIEntryPointApi}

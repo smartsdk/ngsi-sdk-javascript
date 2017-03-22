@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**description** | **String** |  | 
-**subject** | **Object** |  | 
-**notification** | **Object** |  | 
-**expires** | **Date** |  | 
-**status** | **String** |  | 
-**throttling** | **Number** |  | 
+**id** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**subject** | **Object** |  | [optional] 
+**notification** | **Object** |  | [optional] 
+**expires** | **Date** |  | [optional] 
+**status** | **String** |  | [optional] 
+**throttling** | **Number** |  | [optional] 
 
 

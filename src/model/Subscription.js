@@ -52,24 +52,17 @@
    * Constructs a new <code>Subscription</code>.
    * @alias module:model/Subscription
    * @class
-   * @param id {String} 
-   * @param description {String} 
-   * @param subject {Object} 
-   * @param notification {Object} 
-   * @param expires {Date} 
-   * @param status {String} 
-   * @param throttling {Number} 
    */
-  var exports = function(id, description, subject, notification, expires, status, throttling) {
+  var exports = function() {
     var _this = this;
 
-    _this['id'] = id;
-    _this['description'] = description;
-    _this['subject'] = subject;
-    _this['notification'] = notification;
-    _this['expires'] = expires;
-    _this['status'] = status;
-    _this['throttling'] = throttling;
+
+
+
+
+
+
+
   };
 
   /**

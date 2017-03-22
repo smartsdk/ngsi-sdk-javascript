@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorResponse', 'model/Subscription', 'model/Subscription1', 'model/Subscription2'], factory);
+    define(['ApiClient', 'model/ErrorResponse', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/Subscription'), require('../model/Subscription1'), require('../model/Subscription2'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse, root.NgsiV2.Subscription, root.NgsiV2.Subscription1, root.NgsiV2.Subscription2);
+    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse, root.NgsiV2.Subscription);
   }
-}(this, function(ApiClient, ErrorResponse, Subscription, Subscription1, Subscription2) {
+}(this, function(ApiClient, ErrorResponse, Subscription) {
   'use strict';
 
   /**
@@ -66,7 +66,7 @@
 
     /**
      * Creates a new subscription. The subscription is represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 201 Created * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/Subscription1} body 
+     * @param {module:model/Subscription} body 
      * @param {module:api/SubscriptionsApi~createANewSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.createANewSubscription = function(body, callback) {
@@ -245,7 +245,7 @@
     /**
      * Only the fields included in the request are updated in the subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
-     * @param {module:model/Subscription2} body 
+     * @param {module:model/Subscription} body 
      * @param {module:api/SubscriptionsApi~updateSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateSubscription = function(subscriptionId, body, callback) {

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorResponse', 'model/Operation', 'model/Query'], factory);
+    define(['ApiClient', 'model/BatchOperation', 'model/ErrorResponse', 'model/Query'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/Operation'), require('../model/Query'));
+    module.exports = factory(require('../ApiClient'), require('../model/BatchOperation'), require('../model/ErrorResponse'), require('../model/Query'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse, root.NgsiV2.Operation, root.NgsiV2.Query);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.BatchOperation, root.NgsiV2.ErrorResponse, root.NgsiV2.Query);
   }
-}(this, function(ApiClient, ErrorResponse, Operation, Query) {
+}(this, function(ApiClient, BatchOperation, ErrorResponse, Query) {
   'use strict';
 
   /**
@@ -120,7 +120,7 @@
 
     /**
      * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/Operation} body 
+     * @param {module:model/BatchOperation} body 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/BatchOperationsApi~updateCallback} callback The callback function, accepting three arguments: error, data, response
