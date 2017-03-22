@@ -118,5 +118,7 @@ Class | Method | HTTP request | Description
 - **Type**: OAuth
 - **Flow**: password
 - **Authorization URL**: 
-- **Scopes**: N/A
+- **Scopes**: 
+  - read: read
+  - write: write
 
