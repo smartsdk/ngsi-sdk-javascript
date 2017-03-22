@@ -52,10 +52,14 @@
    * Constructs a new <code>Entitiy</code>.
    * @alias module:model/Entitiy
    * @class
+   * @param type {String} 
+   * @param id {String} 
    */
-  var exports = function() {
+  var exports = function(type, id) {
     var _this = this;
 
+    _this['type'] = type;
+    _this['id'] = id;
   };
 
   /**
@@ -69,10 +73,24 @@
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      }
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
     }
     return obj;
   }
 
+  /**
+   * @member {String} type
+   */
+  exports.prototype['type'] = undefined;
+  /**
+   * @member {String} id
+   */
+  exports.prototype['id'] = undefined;
 
 
 
