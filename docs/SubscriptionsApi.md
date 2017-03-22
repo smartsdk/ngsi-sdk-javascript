@@ -49,7 +49,7 @@ apiInstance.createANewSubscription(body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Subscription**](Subscription.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  |
 
 ### Return type
 
@@ -175,7 +175,6 @@ Name | Type | Description  | Notes
 > [Subscription] retrieveSubscriptions(opts)
 
 
-
 Returns a list of all the subscriptions present in the system. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
@@ -269,7 +268,7 @@ apiInstance.updateSubscription(subscriptionId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| subscription Id. | 
- **body** | [**Subscription**](Subscription.md)|  | 
+ **body** | [**Subscription**](Subscription.md)|  |
 
 ### Return type
 

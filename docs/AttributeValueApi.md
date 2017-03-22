@@ -13,7 +13,6 @@ Method | HTTP request | Description
 > AttributeValue getAttributeValue(entityId, attrName, opts)
 
 
-
 This operation returns the &#x60;value&#x60; property with the value of the attribute. * If attribute value is JSON Array or Object:   * If &#x60;Accept&#x60; header can be expanded to &#x60;application/json&#x60; or &#x60;text/plain&#x60; return the value as a JSON with a     response type of application/json or text/plain (whichever is the first in &#x60;Accept&#x60; header or     &#x60;application/json&#x60; in the case of &#x60;Accept: *_/_*&#x60;).   * Else return a HTTP error \&quot;406 Not Acceptable: accepted MIME types: application/json, text/plain\&quot; * If attribute value is a string, number, null or boolean:   * If &#x60;Accept&#x60; header can be expanded to text/plain return the value as text. In case of a string, citation     marks are used at the begining and end.   * Else return a HTTP error \&quot;406 Not Acceptable: accepted MIME types: text/plain\&quot; Response: * Successful operation uses 200 OK. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
@@ -94,7 +93,6 @@ var entityId = "entityId_example"; // String | Id of the entity to be updated.
 var attrName = "attrName_example"; // String | Attribute name.
 
 var body = new NgsiV2.AttributeValue(); // AttributeValue | JSON AttributeValue Representation
-
 var opts = { 
   'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
 };

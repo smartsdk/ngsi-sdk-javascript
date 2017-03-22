@@ -93,7 +93,6 @@
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = EntityType;
-
       return this.apiClient.callApi(
         '/types/{entityType}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -106,6 +105,7 @@
      * @callback module:api/TypesApi~retrieveEntityTypesCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/EntityType>} data The data returned by the service call.
+     * @param {Array.<module:model/RetrieveEntityTypesResponse>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 

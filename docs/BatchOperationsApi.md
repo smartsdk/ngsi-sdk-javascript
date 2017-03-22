@@ -29,7 +29,7 @@ fiware_token.apiKey = 'YOUR API KEY';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.Query(); // Query | 
+var body = new NgsiV2.Query(); // Query |
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of entities to be retrieved.
@@ -52,7 +52,7 @@ apiInstance.query(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Query**](Query.md)|  | 
+ **body** | [**Query**](Query.md)|  |
  **limit** | **Number**| Limit the number of entities to be retrieved. | [optional] 
  **offset** | **Number**| Skip a number of records. | [optional] 
  **orderBy** | **String**| Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details. | [optional] 
@@ -92,7 +92,7 @@ fiware_token.apiKey = 'YOUR API KEY';
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.BatchOperation(); // BatchOperation | 
+var body = new NgsiV2.BatchOperation(); // BatchOperation |
 
 var opts = { 
   'options': "options_example" // String | Options dictionary

@@ -1,4 +1,4 @@
-# ngsi_v2
+# NGSI v2 Javascript and NodeJS SDK 
 
 NgsiV2 - JavaScript client for ngsi_v2
 NGSI V2 API description in Swagger
@@ -59,7 +59,6 @@ var fiware_token = defaultClient.authentications['fiware_token'];
 fiware_token.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //fiware_token.apiKeyPrefix['X-Auth-Token'] = "Token"
-
 var api = new NgsiV2.APIEntryPointApi()
 
 var callback = function(error, data, response) {
@@ -105,7 +104,6 @@ Class | Method | HTTP request | Description
 
 
 ## Documentation for Models
-
  - [NgsiV2.APIEntryPoint](docs/APIEntryPoint.md)
  - [NgsiV2.Attribute](docs/Attribute.md)
  - [NgsiV2.AttributeValue](docs/AttributeValue.md)
@@ -120,10 +118,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-
 ### fiware_token
 
 - **Type**: API key
 - **API key parameter name**: X-Auth-Token
 - **Location**: HTTP header
-

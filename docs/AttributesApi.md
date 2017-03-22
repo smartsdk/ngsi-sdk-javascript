@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityId** | **String**| Id of the entity to update | 
  **attrName** | **String**| Attribute name | 
- **body** | **Object**|  | 
+ **body** | **Object**|  |
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
 
 ### Return type
