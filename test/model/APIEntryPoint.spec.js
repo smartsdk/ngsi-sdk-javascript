@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new NgsiV2.InlineResponse200();
+    instance = new NgsiV2.APIEntryPoint();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,52 +58,28 @@
       object[property] = value;
   }
 
-  describe('InlineResponse200', function() {
-    it('should create an instance of InlineResponse200', function() {
-      // uncomment below and update the code to test InlineResponse200
-      //var instane = new NgsiV2.InlineResponse200();
-      //expect(instance).to.be.a(NgsiV2.InlineResponse200);
+  describe('APIEntryPoint', function() {
+    it('should create an instance of APIEntryPoint', function() {
+      // uncomment below and update the code to test APIEntryPoint
+      //var instane = new NgsiV2.APIEntryPoint();
+      //expect(instance).to.be.a(NgsiV2.APIEntryPoint);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instane = new NgsiV2.InlineResponse200();
+    it('should have the property entitiesUrl (base name: "entities_url")', function() {
+      // uncomment below and update the code to test the property entitiesUrl
+      //var instane = new NgsiV2.APIEntryPoint();
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instane = new NgsiV2.InlineResponse200();
+    it('should have the property typesUrl (base name: "types_url")', function() {
+      // uncomment below and update the code to test the property typesUrl
+      //var instane = new NgsiV2.APIEntryPoint();
       //expect(instance).to.be();
     });
 
-    it('should have the property subject (base name: "subject")', function() {
-      // uncomment below and update the code to test the property subject
-      //var instane = new NgsiV2.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property notification (base name: "notification")', function() {
-      // uncomment below and update the code to test the property notification
-      //var instane = new NgsiV2.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property expires (base name: "expires")', function() {
-      // uncomment below and update the code to test the property expires
-      //var instane = new NgsiV2.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instane = new NgsiV2.InlineResponse200();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property throttling (base name: "throttling")', function() {
-      // uncomment below and update the code to test the property throttling
-      //var instane = new NgsiV2.InlineResponse200();
+    it('should have the property subscriptionsUrl (base name: "subscriptions_url")', function() {
+      // uncomment below and update the code to test the property subscriptionsUrl
+      //var instane = new NgsiV2.APIEntryPoint();
       //expect(instance).to.be();
     });
 

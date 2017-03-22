@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body', 'model/Body1', 'model/ErrorResponse', 'model/InlineResponse2001'], factory);
+    define(['ApiClient', 'model/Body', 'model/Body1', 'model/ErrorResponse', 'model/InlineResponse200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Body'), require('../model/Body1'), require('../model/ErrorResponse'), require('../model/InlineResponse2001'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body'), require('../model/Body1'), require('../model/ErrorResponse'), require('../model/InlineResponse200'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body, root.NgsiV2.Body1, root.NgsiV2.ErrorResponse, root.NgsiV2.InlineResponse2001);
+    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body, root.NgsiV2.Body1, root.NgsiV2.ErrorResponse, root.NgsiV2.InlineResponse200);
   }
-}(this, function(ApiClient, Body, Body1, ErrorResponse, InlineResponse2001) {
+}(this, function(ApiClient, Body, Body1, ErrorResponse, InlineResponse200) {
   'use strict';
 
   /**
@@ -147,7 +147,7 @@
      * Callback function to receive the result of the retrieveSubscription operation.
      * @callback module:api/SubscriptionsApi~retrieveSubscriptionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {module:model/InlineResponse200} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -155,7 +155,7 @@
      * The response is the subscription represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
      * @param {module:api/SubscriptionsApi~retrieveSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * data is of type: {@link module:model/InlineResponse200}
      */
     this.retrieveSubscription = function(subscriptionId, callback) {
       var postBody = null;
@@ -179,7 +179,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = InlineResponse2001;
+      var returnType = InlineResponse200;
 
       return this.apiClient.callApi(
         '/subscriptions/{subscriptionId}', 'GET',
@@ -192,7 +192,7 @@
      * Callback function to receive the result of the retrieveSubscriptions operation.
      * @callback module:api/SubscriptionsApi~retrieveSubscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse2001>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -203,7 +203,7 @@
      * @param {Number} opts.offset Skip a number of records
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/SubscriptionsApi~retrieveSubscriptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse2001>}
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
      */
     this.retrieveSubscriptions = function(opts, callback) {
       opts = opts || {};
@@ -225,7 +225,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [InlineResponse2001];
+      var returnType = [InlineResponse200];
 
       return this.apiClient.callApi(
         '/subscriptions', 'GET',

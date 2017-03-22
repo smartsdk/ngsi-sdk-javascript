@@ -52,16 +52,24 @@
    * Constructs a new <code>InlineResponse200</code>.
    * @alias module:model/InlineResponse200
    * @class
-   * @param entitiesUrl {String} URL which points to the entities resource
-   * @param typesUrl {String} URL which points to the types resource
-   * @param subscriptionsUrl {String} URL which points to the subscriptions resource
+   * @param id {String} 
+   * @param description {String} 
+   * @param subject {Object} 
+   * @param notification {Object} 
+   * @param expires {Date} 
+   * @param status {String} 
+   * @param throttling {Number} 
    */
-  var exports = function(entitiesUrl, typesUrl, subscriptionsUrl) {
+  var exports = function(id, description, subject, notification, expires, status, throttling) {
     var _this = this;
 
-    _this['entities_url'] = entitiesUrl;
-    _this['types_url'] = typesUrl;
-    _this['subscriptions_url'] = subscriptionsUrl;
+    _this['id'] = id;
+    _this['description'] = description;
+    _this['subject'] = subject;
+    _this['notification'] = notification;
+    _this['expires'] = expires;
+    _this['status'] = status;
+    _this['throttling'] = throttling;
   };
 
   /**
@@ -75,34 +83,59 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('entities_url')) {
-        obj['entities_url'] = ApiClient.convertToType(data['entities_url'], 'String');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('types_url')) {
-        obj['types_url'] = ApiClient.convertToType(data['types_url'], 'String');
+      if (data.hasOwnProperty('description')) {
+        obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
-      if (data.hasOwnProperty('subscriptions_url')) {
-        obj['subscriptions_url'] = ApiClient.convertToType(data['subscriptions_url'], 'String');
+      if (data.hasOwnProperty('subject')) {
+        obj['subject'] = ApiClient.convertToType(data['subject'], Object);
+      }
+      if (data.hasOwnProperty('notification')) {
+        obj['notification'] = ApiClient.convertToType(data['notification'], Object);
+      }
+      if (data.hasOwnProperty('expires')) {
+        obj['expires'] = ApiClient.convertToType(data['expires'], 'Date');
+      }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      }
+      if (data.hasOwnProperty('throttling')) {
+        obj['throttling'] = ApiClient.convertToType(data['throttling'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * URL which points to the entities resource
-   * @member {String} entities_url
+   * @member {String} id
    */
-  exports.prototype['entities_url'] = undefined;
+  exports.prototype['id'] = undefined;
   /**
-   * URL which points to the types resource
-   * @member {String} types_url
+   * @member {String} description
    */
-  exports.prototype['types_url'] = undefined;
+  exports.prototype['description'] = undefined;
   /**
-   * URL which points to the subscriptions resource
-   * @member {String} subscriptions_url
+   * @member {Object} subject
    */
-  exports.prototype['subscriptions_url'] = undefined;
+  exports.prototype['subject'] = undefined;
+  /**
+   * @member {Object} notification
+   */
+  exports.prototype['notification'] = undefined;
+  /**
+   * @member {Date} expires
+   */
+  exports.prototype['expires'] = undefined;
+  /**
+   * @member {String} status
+   */
+  exports.prototype['status'] = undefined;
+  /**
+   * @member {Number} throttling
+   */
+  exports.prototype['throttling'] = undefined;
 
 
 

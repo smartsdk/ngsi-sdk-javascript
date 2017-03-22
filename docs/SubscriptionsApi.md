@@ -105,7 +105,7 @@ No authorization required
 
 <a name="retrieveSubscription"></a>
 # **retrieveSubscription**
-> InlineResponse2001 retrieveSubscription(subscriptionId)
+> InlineResponse200 retrieveSubscription(subscriptionId)
 
 
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ No authorization required
 
 <a name="retrieveSubscriptions"></a>
 # **retrieveSubscriptions**
-> [InlineResponse2001] retrieveSubscriptions(opts)
+> [InlineResponse200] retrieveSubscriptions(opts)
 
 
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse2001]**](InlineResponse2001.md)
+[**[InlineResponse200]**](InlineResponse200.md)
 
 ### Authorization
 

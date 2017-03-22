@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="retrieveAPIResources"></a>
 # **retrieveAPIResources**
-> InlineResponse200 retrieveAPIResources()
+> APIEntryPoint retrieveAPIResources()
 
 
 
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**APIEntryPoint**](APIEntryPoint.md)
 
 ### Authorization
 
