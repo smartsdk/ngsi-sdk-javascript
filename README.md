@@ -102,7 +102,6 @@ Class | Method | HTTP request | Description
  - [NgsiV2.BatchOperation](docs/BatchOperation.md)
  - [NgsiV2.OpqueryEntities](docs/OpqueryEntities.md)
  - [NgsiV2.Query](docs/Query.md)
- - [NgsiV2.Subscription](docs/Subscription.md)
 
 
 ## Documentation for Authorization

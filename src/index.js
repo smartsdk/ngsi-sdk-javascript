@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/APIEntryPoint', 'model/BatchOperation', 'model/OpqueryEntities', 'model/Query', 'model/Subscription', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/APIEntryPoint', 'model/BatchOperation', 'model/OpqueryEntities', 'model/Query', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/BatchOperation'), require('./model/OpqueryEntities'), require('./model/Query'), require('./model/Subscription'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/APIEntryPoint'), require('./model/BatchOperation'), require('./model/OpqueryEntities'), require('./model/Query'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, APIEntryPoint, BatchOperation, OpqueryEntities, Query, Subscription, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, APIEntryPoint, BatchOperation, OpqueryEntities, Query, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -90,11 +90,6 @@
      * @property {module:model/Query}
      */
     Query: Query,
-    /**
-     * The Subscription model constructor.
-     * @property {module:model/Subscription}
-     */
-    Subscription: Subscription,
     /**
      * The APIEntryPointApi service constructor.
      * @property {module:api/APIEntryPointApi}
