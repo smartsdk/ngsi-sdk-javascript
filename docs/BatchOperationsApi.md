@@ -66,7 +66,7 @@ No authorization required
 
 <a name="update"></a>
 # **update**
-> update(body, opts)
+> update(opts)
 
 
 
@@ -77,8 +77,6 @@ This operation allows to create, update and/or delete several entities in a sing
 var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
-
-var body = new NgsiV2.UpdateRequest(); // UpdateRequest | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -91,14 +89,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.update(body, opts, callback);
+apiInstance.update(opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateRequest**](UpdateRequest.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type

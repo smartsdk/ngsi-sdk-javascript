@@ -25,7 +25,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.SubscriptionsApi();
 
-var body = new NgsiV2.CreateANewSubscriptionRequest(); // CreateANewSubscriptionRequest | 
+var body = new NgsiV2.Body(); // Body | 
 
 
 var callback = function(error, data, response) {
@@ -42,7 +42,7 @@ apiInstance.createANewSubscription(body, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateANewSubscriptionRequest**](CreateANewSubscriptionRequest.md)|  | 
+ **body** | [**Body**](Body.md)|  | 
 
 ### Return type
 
@@ -105,7 +105,7 @@ No authorization required
 
 <a name="retrieveSubscription"></a>
 # **retrieveSubscription**
-> RetrieveSubscriptionResponse retrieveSubscription(subscriptionId)
+> InlineResponse2001 retrieveSubscription(subscriptionId)
 
 
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RetrieveSubscriptionResponse**](RetrieveSubscriptionResponse.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ No authorization required
 
 <a name="retrieveSubscriptions"></a>
 # **retrieveSubscriptions**
-> [RetrieveSubscriptionsResponse] retrieveSubscriptions(opts)
+> [InlineResponse2001] retrieveSubscriptions(opts)
 
 
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[RetrieveSubscriptionsResponse]**](RetrieveSubscriptionsResponse.md)
+[**[InlineResponse2001]**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ var apiInstance = new NgsiV2.SubscriptionsApi();
 
 var subscriptionId = "subscriptionId_example"; // String | subscription Id.
 
-var body = new NgsiV2.UpdateSubscriptionRequest(); // UpdateSubscriptionRequest | 
+var body = new NgsiV2.Body1(); // Body1 | 
 
 
 var callback = function(error, data, response) {
@@ -234,7 +234,7 @@ apiInstance.updateSubscription(subscriptionId, body, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscriptionId** | **String**| subscription Id. | 
- **body** | [**UpdateSubscriptionRequest**](UpdateSubscriptionRequest.md)|  | 
+ **body** | [**Body1**](Body1.md)|  | 
 
 ### Return type
 

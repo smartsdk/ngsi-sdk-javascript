@@ -34,7 +34,7 @@
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.CreateANewSubscriptionRequest = factory(root.NgsiV2.ApiClient);
+    root.NgsiV2.InlineResponse2001 = factory(root.NgsiV2.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -43,42 +43,49 @@
 
 
   /**
-   * The CreateANewSubscriptionRequest model module.
-   * @module model/CreateANewSubscriptionRequest
+   * The InlineResponse2001 model module.
+   * @module model/InlineResponse2001
    * @version v2
    */
 
   /**
-   * Constructs a new <code>CreateANewSubscriptionRequest</code>.
-   * @alias module:model/CreateANewSubscriptionRequest
+   * Constructs a new <code>InlineResponse2001</code>.
+   * @alias module:model/InlineResponse2001
    * @class
+   * @param id {String} 
    * @param description {String} 
    * @param subject {Object} 
    * @param notification {Object} 
    * @param expires {Date} 
+   * @param status {String} 
    * @param throttling {Number} 
    */
-  var exports = function(description, subject, notification, expires, throttling) {
+  var exports = function(id, description, subject, notification, expires, status, throttling) {
     var _this = this;
 
+    _this['id'] = id;
     _this['description'] = description;
     _this['subject'] = subject;
     _this['notification'] = notification;
     _this['expires'] = expires;
+    _this['status'] = status;
     _this['throttling'] = throttling;
   };
 
   /**
-   * Constructs a <code>CreateANewSubscriptionRequest</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>InlineResponse2001</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CreateANewSubscriptionRequest} obj Optional instance to populate.
-   * @return {module:model/CreateANewSubscriptionRequest} The populated <code>CreateANewSubscriptionRequest</code> instance.
+   * @param {module:model/InlineResponse2001} obj Optional instance to populate.
+   * @return {module:model/InlineResponse2001} The populated <code>InlineResponse2001</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
       if (data.hasOwnProperty('description')) {
         obj['description'] = ApiClient.convertToType(data['description'], 'String');
       }
@@ -91,6 +98,9 @@
       if (data.hasOwnProperty('expires')) {
         obj['expires'] = ApiClient.convertToType(data['expires'], 'Date');
       }
+      if (data.hasOwnProperty('status')) {
+        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      }
       if (data.hasOwnProperty('throttling')) {
         obj['throttling'] = ApiClient.convertToType(data['throttling'], 'Number');
       }
@@ -98,6 +108,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} id
+   */
+  exports.prototype['id'] = undefined;
   /**
    * @member {String} description
    */
@@ -114,6 +128,10 @@
    * @member {Date} expires
    */
   exports.prototype['expires'] = undefined;
+  /**
+   * @member {String} status
+   */
+  exports.prototype['status'] = undefined;
   /**
    * @member {Number} throttling
    */

@@ -98,13 +98,14 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [NgsiV2.Body](docs/Body.md)
+ - [NgsiV2.Body1](docs/Body1.md)
  - [NgsiV2.CreateANewSubscriptionRequest](docs/CreateANewSubscriptionRequest.md)
  - [NgsiV2.InlineResponse200](docs/InlineResponse200.md)
+ - [NgsiV2.InlineResponse2001](docs/InlineResponse2001.md)
  - [NgsiV2.QueryRequest](docs/QueryRequest.md)
  - [NgsiV2.QueryResponse](docs/QueryResponse.md)
- - [NgsiV2.RetrieveApiResourcesResponse](docs/RetrieveApiResourcesResponse.md)
  - [NgsiV2.RetrieveSubscriptionResponse](docs/RetrieveSubscriptionResponse.md)
- - [NgsiV2.RetrieveSubscriptionsResponse](docs/RetrieveSubscriptionsResponse.md)
  - [NgsiV2.UpdateRequest](docs/UpdateRequest.md)
  - [NgsiV2.UpdateSubscriptionRequest](docs/UpdateSubscriptionRequest.md)
 

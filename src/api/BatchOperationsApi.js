@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/QueryRequest', 'model/QueryResponse', 'model/UpdateRequest'], factory);
+    define(['ApiClient', 'model/QueryRequest', 'model/QueryResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/QueryRequest'), require('../model/QueryResponse'), require('../model/UpdateRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/QueryRequest'), require('../model/QueryResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.QueryRequest, root.NgsiV2.QueryResponse, root.NgsiV2.UpdateRequest);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.QueryRequest, root.NgsiV2.QueryResponse);
   }
-}(this, function(ApiClient, QueryRequest, QueryResponse, UpdateRequest) {
+}(this, function(ApiClient, QueryRequest, QueryResponse) {
   'use strict';
 
   /**
@@ -120,19 +120,13 @@
 
     /**
      * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/UpdateRequest} body 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/BatchOperationsApi~updateCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.update = function(body, opts, callback) {
+    this.update = function(opts, callback) {
       opts = opts || {};
-      var postBody = body;
-
-      // verify the required parameter 'body' is set
-      if (body == undefined || body == null) {
-        throw new Error("Missing the required parameter 'body' when calling update");
-      }
+      var postBody = null;
 
 
       var pathParams = {

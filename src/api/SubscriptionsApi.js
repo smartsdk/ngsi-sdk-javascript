@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CreateANewSubscriptionRequest', 'model/RetrieveSubscriptionResponse', 'model/RetrieveSubscriptionsResponse', 'model/UpdateSubscriptionRequest'], factory);
+    define(['ApiClient', 'model/Body', 'model/Body1', 'model/InlineResponse2001'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CreateANewSubscriptionRequest'), require('../model/RetrieveSubscriptionResponse'), require('../model/RetrieveSubscriptionsResponse'), require('../model/UpdateSubscriptionRequest'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body'), require('../model/Body1'), require('../model/InlineResponse2001'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.CreateANewSubscriptionRequest, root.NgsiV2.RetrieveSubscriptionResponse, root.NgsiV2.RetrieveSubscriptionsResponse, root.NgsiV2.UpdateSubscriptionRequest);
+    root.NgsiV2.SubscriptionsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body, root.NgsiV2.Body1, root.NgsiV2.InlineResponse2001);
   }
-}(this, function(ApiClient, CreateANewSubscriptionRequest, RetrieveSubscriptionResponse, RetrieveSubscriptionsResponse, UpdateSubscriptionRequest) {
+}(this, function(ApiClient, Body, Body1, InlineResponse2001) {
   'use strict';
 
   /**
@@ -66,7 +66,7 @@
 
     /**
      * Creates a new subscription. The subscription is represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 201 Created * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/CreateANewSubscriptionRequest} body 
+     * @param {module:model/Body} body 
      * @param {module:api/SubscriptionsApi~createANewSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.createANewSubscription = function(body, callback) {
@@ -147,7 +147,7 @@
      * Callback function to receive the result of the retrieveSubscription operation.
      * @callback module:api/SubscriptionsApi~retrieveSubscriptionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/RetrieveSubscriptionResponse} data The data returned by the service call.
+     * @param {module:model/InlineResponse2001} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -155,7 +155,7 @@
      * The response is the subscription represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
      * @param {module:api/SubscriptionsApi~retrieveSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RetrieveSubscriptionResponse}
+     * data is of type: {@link module:model/InlineResponse2001}
      */
     this.retrieveSubscription = function(subscriptionId, callback) {
       var postBody = null;
@@ -179,7 +179,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = RetrieveSubscriptionResponse;
+      var returnType = InlineResponse2001;
 
       return this.apiClient.callApi(
         '/subscriptions/{subscriptionId}', 'GET',
@@ -192,7 +192,7 @@
      * Callback function to receive the result of the retrieveSubscriptions operation.
      * @callback module:api/SubscriptionsApi~retrieveSubscriptionsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/RetrieveSubscriptionsResponse>} data The data returned by the service call.
+     * @param {Array.<module:model/InlineResponse2001>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -203,7 +203,7 @@
      * @param {Number} opts.offset Skip a number of records
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/SubscriptionsApi~retrieveSubscriptionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/RetrieveSubscriptionsResponse>}
+     * data is of type: {@link Array.<module:model/InlineResponse2001>}
      */
     this.retrieveSubscriptions = function(opts, callback) {
       opts = opts || {};
@@ -225,7 +225,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [RetrieveSubscriptionsResponse];
+      var returnType = [InlineResponse2001];
 
       return this.apiClient.callApi(
         '/subscriptions', 'GET',
@@ -245,7 +245,7 @@
     /**
      * Only the fields included in the request are updated in the subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
      * @param {String} subscriptionId subscription Id.
-     * @param {module:model/UpdateSubscriptionRequest} body 
+     * @param {module:model/Body1} body 
      * @param {module:api/SubscriptionsApi~updateSubscriptionCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.updateSubscription = function(subscriptionId, body, callback) {
