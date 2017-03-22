@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NGSI V2 JavaScript SDK example</title>
+</head>
+<body>
+  <script src="https://raw.githubusercontent.com/smartsdk/ngsi-sdk-javascript/master/js/ngsi.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+  var NgsiV2 = FIWARE.NgsiV2;
+  var defaultClient = NgsiV2.ApiClient.instance;
+
+  // Configure API key authorization: fiware_token
+  var fiware_token = defaultClient.authentications['fiware_token'];
+  fiware_token.apiKey = "My Token"
+  // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+  //fiware_token.apiKeyPrefix['X-Auth-Token'] = "Token"
+  var api = new NgsiV2.APIEntryPointApi()
+
+  var callback = function(error, data, response) {
+    if (error) {
+      console.error(error);
+      $("#results").html(JSON.stringify(error, null, '\t'));
+    } else {
+      console.log('API called successfully. Returned data: ' + JSON.stringify(data, null, '\t'));
+      $("#results").html(JSON.stringify(data, null, '\t'));
+    }
+  };
+  api.retrieveAPIResources(callback);
+  </script>
+</body>
+To use correctly the example you have to generate a new token and replace it. For example, you can use this <a href="https://github.com/fgalan/oauth2-example-orion-client/blob/master/token_script.sh">script</a>.
+<pre id="results"></pre>
+</html>
