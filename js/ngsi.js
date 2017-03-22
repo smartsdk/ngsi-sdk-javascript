@@ -1,4 +1,7 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var NgsiV2 = require('ngsi_v2');
+
+},{"ngsi_v2":10}],2:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -99,7 +102,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/APIEntryPoint":10,"./model/ErrorResponse":16}],2:[function(require,module,exports){
+},{"./ApiClient":3,"./model/APIEntryPoint":11,"./model/ErrorResponse":17}],3:[function(require,module,exports){
 (function (Buffer){
 /**
  * ngsi-v2
@@ -621,7 +624,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 }));
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":24,"fs":22,"superagent":"superagent"}],3:[function(require,module,exports){
+},{"buffer":25,"fs":23,"superagent":"superagent"}],4:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -801,7 +804,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/AttributeValue":12,"./model/ErrorResponse":16}],4:[function(require,module,exports){
+},{"./ApiClient":3,"./model/AttributeValue":13,"./model/ErrorResponse":17}],5:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -1036,7 +1039,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/Entity":14,"./model/ErrorResponse":16}],5:[function(require,module,exports){
+},{"./ApiClient":3,"./model/Entity":15,"./model/ErrorResponse":17}],6:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -1200,7 +1203,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/BatchOperation":13,"./model/ErrorResponse":16,"./model/Query":17}],6:[function(require,module,exports){
+},{"./ApiClient":3,"./model/BatchOperation":14,"./model/ErrorResponse":17,"./model/Query":18}],7:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -1700,7 +1703,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/Attribute":11,"./model/Entity":14,"./model/ErrorResponse":16}],7:[function(require,module,exports){
+},{"./ApiClient":3,"./model/Attribute":12,"./model/Entity":15,"./model/ErrorResponse":17}],8:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -1991,7 +1994,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/ErrorResponse":16,"./model/Subscription":19}],8:[function(require,module,exports){
+},{"./ApiClient":3,"./model/ErrorResponse":17,"./model/Subscription":20}],9:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2145,7 +2148,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{"./ApiClient":2,"./model/EntityType":15,"./model/ErrorResponse":16}],9:[function(require,module,exports){
+},{"./ApiClient":3,"./model/EntityType":16,"./model/ErrorResponse":17}],10:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2308,7 +2311,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
   return exports;
 }));
 
-},{".//APIEntryPointApi":1,".//AttributeValueApi":3,".//AttributesApi":4,".//BatchOperationsApi":5,".//EntitiesApi":6,".//SubscriptionsApi":7,".//TypesApi":8,"./ApiClient":2,"./model/APIEntryPoint":10,"./model/Attribute":11,"./model/AttributeValue":12,"./model/BatchOperation":13,"./model/Entity":14,"./model/EntityType":15,"./model/ErrorResponse":16,"./model/Query":17,"./model/QueryPattern":18,"./model/Subscription":19}],10:[function(require,module,exports){
+},{".//APIEntryPointApi":2,".//AttributeValueApi":4,".//AttributesApi":5,".//BatchOperationsApi":6,".//EntitiesApi":7,".//SubscriptionsApi":8,".//TypesApi":9,"./ApiClient":3,"./model/APIEntryPoint":11,"./model/Attribute":12,"./model/AttributeValue":13,"./model/BatchOperation":14,"./model/Entity":15,"./model/EntityType":16,"./model/ErrorResponse":17,"./model/Query":18,"./model/QueryPattern":19,"./model/Subscription":20}],11:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2422,7 +2425,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],11:[function(require,module,exports){
+},{"../ApiClient":3}],12:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2533,7 +2536,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],12:[function(require,module,exports){
+},{"../ApiClient":3}],13:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2617,7 +2620,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],13:[function(require,module,exports){
+},{"../ApiClient":3}],14:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2746,7 +2749,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2,"./Entity":14}],14:[function(require,module,exports){
+},{"../ApiClient":3,"./Entity":15}],15:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2848,7 +2851,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],15:[function(require,module,exports){
+},{"../ApiClient":3}],16:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -2932,7 +2935,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],16:[function(require,module,exports){
+},{"../ApiClient":3}],17:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -3034,7 +3037,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],17:[function(require,module,exports){
+},{"../ApiClient":3}],18:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -3134,7 +3137,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2,"./QueryPattern":18}],18:[function(require,module,exports){
+},{"../ApiClient":3,"./QueryPattern":19}],19:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -3250,7 +3253,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],19:[function(require,module,exports){
+},{"../ApiClient":3}],20:[function(require,module,exports){
 /**
  * ngsi-v2
  * NGSI V2 API
@@ -3390,7 +3393,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 
 
 
-},{"../ApiClient":2}],20:[function(require,module,exports){
+},{"../ApiClient":3}],21:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -3555,7 +3558,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 
 /**
  * Reduce `arr` with `fn`.
@@ -3580,9 +3583,9 @@ module.exports = function(arr, fn, initial){
   
   return curr;
 };
-},{}],22:[function(require,module,exports){
-
 },{}],23:[function(require,module,exports){
+
+},{}],24:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -3698,7 +3701,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -5406,7 +5409,7 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":23,"ieee754":25}],25:[function(require,module,exports){
+},{"base64-js":24,"ieee754":26}],26:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -6685,4 +6688,4 @@ request.put = function(url, data, fn){
 
 module.exports = request;
 
-},{"emitter":20,"reduce":21}]},{},[9]);
+},{"emitter":21,"reduce":22}]},{},[1]);
