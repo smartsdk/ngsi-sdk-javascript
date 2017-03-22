@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
  - [NgsiV2.AttributeValue](docs/AttributeValue.md)
  - [NgsiV2.BatchOperation](docs/BatchOperation.md)
  - [NgsiV2.Entity](docs/Entity.md)
+ - [NgsiV2.EntityType](docs/EntityType.md)
  - [NgsiV2.ErrorResponse](docs/ErrorResponse.md)
  - [NgsiV2.Query](docs/Query.md)
  - [NgsiV2.QueryPattern](docs/QueryPattern.md)
