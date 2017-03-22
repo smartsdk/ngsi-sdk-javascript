@@ -28,7 +28,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.EntitiesApi();
 
-var body = new NgsiV2.Entity(); // Entity | 
+var body = new NgsiV2.Entity(); // Entity | JSON Entity Representationy
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -48,7 +48,7 @@ apiInstance.createEntity(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Entity**](Entity.md)|  | 
+ **body** | [**Entity**](Entity.md)| JSON Entity Representationy | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -244,7 +244,7 @@ No authorization required
 
 <a name="retrieveEntity"></a>
 # **retrieveEntity**
-> Object retrieveEntity(entityId, opts)
+> Entity retrieveEntity(entityId, opts)
 
 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**Entity**](Entity.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ No authorization required
 
 <a name="retrieveEntityAttributes"></a>
 # **retrieveEntityAttributes**
-> Object retrieveEntityAttributes(entityId, opts)
+> Entity retrieveEntityAttributes(entityId, opts)
 
 
 
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**Entity**](Entity.md)
 
 ### Authorization
 

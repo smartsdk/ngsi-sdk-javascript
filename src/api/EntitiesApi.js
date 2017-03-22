@@ -66,7 +66,7 @@
 
     /**
      * The payload is an object representing the entity to be created. The object follows the JSON entity representation format (described in a \&quot;JSON Entity Representation\&quot; section). Response: * Successful operation uses 201 Created. Reponse includes a &#x60;Location&#x60; header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/Entity} body 
+     * @param {module:model/Entity} body JSON Entity Representationy
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/EntitiesApi~createEntityCallback} callback The callback function, accepting three arguments: error, data, response
@@ -279,7 +279,7 @@
      * Callback function to receive the result of the retrieveEntity operation.
      * @callback module:api/EntitiesApi~retrieveEntityCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -291,7 +291,7 @@
      * @param {String} opts.attrs Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/EntitiesApi~retrieveEntityCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/Entity}
      */
     this.retrieveEntity = function(entityId, opts, callback) {
       opts = opts || {};
@@ -319,7 +319,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = Entity;
 
       return this.apiClient.callApi(
         '/entities/{entityId}', 'GET',
@@ -332,7 +332,7 @@
      * Callback function to receive the result of the retrieveEntityAttributes operation.
      * @callback module:api/EntitiesApi~retrieveEntityAttributesCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -344,7 +344,7 @@
      * @param {String} opts.attrs Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/EntitiesApi~retrieveEntityAttributesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/Entity}
      */
     this.retrieveEntityAttributes = function(entityId, opts, callback) {
       opts = opts || {};
@@ -372,7 +372,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = Entity;
 
       return this.apiClient.callApi(
         '/entities/{entityId}/attrs', 'GET',

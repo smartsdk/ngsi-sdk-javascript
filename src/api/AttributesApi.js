@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorResponse'], factory);
+    define(['ApiClient', 'model/Entity', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Entity'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse);
+    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Entity, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ErrorResponse) {
+}(this, function(ApiClient, Entity, ErrorResponse) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
      * Callback function to receive the result of the getAttributeData operation.
      * @callback module:api/AttributesApi~getAttributeDataCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/Entity} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -71,7 +71,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.type Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
      * @param {module:api/AttributesApi~getAttributeDataCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/Entity}
      */
     this.getAttributeData = function(entityId, attrName, opts, callback) {
       opts = opts || {};
@@ -103,7 +103,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = Entity;
 
       return this.apiClient.callApi(
         '/entities/{entityId}/attrs/{attrName}', 'GET',

@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorResponse'], factory);
+    define(['ApiClient', 'model/Entity', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Entity'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.TypesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse);
+    root.NgsiV2.TypesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Entity, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ErrorResponse) {
+}(this, function(ApiClient, Entity, ErrorResponse) {
   'use strict';
 
   /**
@@ -105,7 +105,7 @@
      * Callback function to receive the result of the retrieveEntityTypes operation.
      * @callback module:api/TypesApi~retrieveEntityTypesCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {Array.<module:model/Entity>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -116,7 +116,7 @@
      * @param {Number} opts.offset Skip a number of records.
      * @param {module:model/String} opts.options Options dictionary.
      * @param {module:api/TypesApi~retrieveEntityTypesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link Array.<module:model/Entity>}
      */
     this.retrieveEntityTypes = function(opts, callback) {
       opts = opts || {};
@@ -138,7 +138,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [Object];
+      var returnType = [Entity];
 
       return this.apiClient.callApi(
         '/types/', 'GET',

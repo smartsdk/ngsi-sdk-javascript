@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getAttributeData"></a>
 # **getAttributeData**
-> Object getAttributeData(entityId, attrName, opts)
+> Entity getAttributeData(entityId, attrName, opts)
 
 
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**Entity**](Entity.md)
 
 ### Authorization
 

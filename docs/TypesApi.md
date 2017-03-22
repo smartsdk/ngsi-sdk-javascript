@@ -56,7 +56,7 @@ No authorization required
 
 <a name="retrieveEntityTypes"></a>
 # **retrieveEntityTypes**
-> [Object] retrieveEntityTypes(opts)
+> [Entity] retrieveEntityTypes(opts)
 
 
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**[Entity]**](Entity.md)
 
 ### Authorization
 
