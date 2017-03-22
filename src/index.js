@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body', 'model/Body1', 'model/Body2', 'model/Body3', 'model/CreateANewSubscriptionRequest', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/OpqueryEntities', 'model/QueryRequest', 'model/QueryResponse', 'model/RetrieveSubscriptionResponse', 'model/UpdateRequest', 'model/UpdateSubscriptionRequest', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
+    define(['ApiClient', 'model/Body', 'model/Body1', 'model/Body2', 'model/Body3', 'model/InlineResponse200', 'model/InlineResponse2001', 'model/OpqueryEntities', 'api/APIEntryPointApi', 'api/AttributeValueApi', 'api/AttributesApi', 'api/BatchOperationsApi', 'api/EntitiesApi', 'api/SubscriptionsApi', 'api/TypesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Body'), require('./model/Body1'), require('./model/Body2'), require('./model/Body3'), require('./model/CreateANewSubscriptionRequest'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/OpqueryEntities'), require('./model/QueryRequest'), require('./model/QueryResponse'), require('./model/RetrieveSubscriptionResponse'), require('./model/UpdateRequest'), require('./model/UpdateSubscriptionRequest'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Body'), require('./model/Body1'), require('./model/Body2'), require('./model/Body3'), require('./model/InlineResponse200'), require('./model/InlineResponse2001'), require('./model/OpqueryEntities'), require('./api/APIEntryPointApi'), require('./api/AttributeValueApi'), require('./api/AttributesApi'), require('./api/BatchOperationsApi'), require('./api/EntitiesApi'), require('./api/SubscriptionsApi'), require('./api/TypesApi'));
   }
-}(function(ApiClient, Body, Body1, Body2, Body3, CreateANewSubscriptionRequest, InlineResponse200, InlineResponse2001, OpqueryEntities, QueryRequest, QueryResponse, RetrieveSubscriptionResponse, UpdateRequest, UpdateSubscriptionRequest, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
+}(function(ApiClient, Body, Body1, Body2, Body3, InlineResponse200, InlineResponse2001, OpqueryEntities, APIEntryPointApi, AttributeValueApi, AttributesApi, BatchOperationsApi, EntitiesApi, SubscriptionsApi, TypesApi) {
   'use strict';
 
   /**
@@ -91,11 +91,6 @@
      */
     Body3: Body3,
     /**
-     * The CreateANewSubscriptionRequest model constructor.
-     * @property {module:model/CreateANewSubscriptionRequest}
-     */
-    CreateANewSubscriptionRequest: CreateANewSubscriptionRequest,
-    /**
      * The InlineResponse200 model constructor.
      * @property {module:model/InlineResponse200}
      */
@@ -110,31 +105,6 @@
      * @property {module:model/OpqueryEntities}
      */
     OpqueryEntities: OpqueryEntities,
-    /**
-     * The QueryRequest model constructor.
-     * @property {module:model/QueryRequest}
-     */
-    QueryRequest: QueryRequest,
-    /**
-     * The QueryResponse model constructor.
-     * @property {module:model/QueryResponse}
-     */
-    QueryResponse: QueryResponse,
-    /**
-     * The RetrieveSubscriptionResponse model constructor.
-     * @property {module:model/RetrieveSubscriptionResponse}
-     */
-    RetrieveSubscriptionResponse: RetrieveSubscriptionResponse,
-    /**
-     * The UpdateRequest model constructor.
-     * @property {module:model/UpdateRequest}
-     */
-    UpdateRequest: UpdateRequest,
-    /**
-     * The UpdateSubscriptionRequest model constructor.
-     * @property {module:model/UpdateSubscriptionRequest}
-     */
-    UpdateSubscriptionRequest: UpdateSubscriptionRequest,
     /**
      * The APIEntryPointApi service constructor.
      * @property {module:api/APIEntryPointApi}

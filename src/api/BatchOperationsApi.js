@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body2', 'model/Body3', 'model/QueryResponse'], factory);
+    define(['ApiClient', 'model/Body2', 'model/Body3'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'), require('../model/QueryResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body2, root.NgsiV2.Body3, root.NgsiV2.QueryResponse);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body2, root.NgsiV2.Body3);
   }
-}(this, function(ApiClient, Body2, Body3, QueryResponse) {
+}(this, function(ApiClient, Body2, Body3) {
   'use strict';
 
   /**
@@ -60,7 +60,7 @@
      * Callback function to receive the result of the query operation.
      * @callback module:api/BatchOperationsApi~queryCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/QueryResponse>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -73,7 +73,7 @@
      * @param {String} opts.orderBy Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details.
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/BatchOperationsApi~queryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/QueryResponse>}
+     * data is of type: {@link Array.<Object>}
      */
     this.query = function(body, opts, callback) {
       opts = opts || {};
@@ -101,7 +101,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = [QueryResponse];
+      var returnType = [Object];
 
       return this.apiClient.callApi(
         '/op/query', 'POST',

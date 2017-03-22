@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="query"></a>
 # **query**
-> [QueryResponse] query(body, opts)
+> [Object] query(body, opts)
 
 
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[QueryResponse]**](QueryResponse.md)
+**[Object]**
 
 ### Authorization
 
