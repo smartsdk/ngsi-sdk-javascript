@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/QueryRequest', 'model/QueryResponse'], factory);
+    define(['ApiClient', 'model/Body2', 'model/Body3', 'model/QueryResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/QueryRequest'), require('../model/QueryResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'), require('../model/QueryResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.QueryRequest, root.NgsiV2.QueryResponse);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body2, root.NgsiV2.Body3, root.NgsiV2.QueryResponse);
   }
-}(this, function(ApiClient, QueryRequest, QueryResponse) {
+}(this, function(ApiClient, Body2, Body3, QueryResponse) {
   'use strict';
 
   /**
@@ -66,7 +66,7 @@
 
     /**
      * The response payload is an Array containing one object per matching entity, or an empty array &#x60;[]&#x60; if  no entities are found. The entities follow the JSON entity representation format (described in the section \&quot;JSON Entity Representation\&quot;). The payload may contain the following elements (all of them optional): + &#x60;entities&#x60;: a list of entites to search for. Each element is represented by a JSON object with the   following elements:     + &#x60;id&#x60; or &#x60;idPattern&#x60;: Id or pattern of the affected entities. Both cannot be used at the same       time, but at least one of them must be present.     + &#x60;type&#x60; or &#x60;typePattern&#x60;: Type or type pattern of the entities to search for. Both cannot be used at       the same time. If omitted, it means \&quot;any entity type\&quot;. + &#x60;attributes&#x60;: a list of attribute names to search for. If omitted, it means \&quot;all attributes\&quot;. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
-     * @param {module:model/QueryRequest} body 
+     * @param {module:model/Body3} body 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.limit Limit the number of entities to be retrieved.
      * @param {Number} opts.offset Skip a number of records.
@@ -120,13 +120,19 @@
 
     /**
      * This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+     * @param {module:model/Body2} body 
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.options Options dictionary
      * @param {module:api/BatchOperationsApi~updateCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.update = function(opts, callback) {
+    this.update = function(body, opts, callback) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = body;
+
+      // verify the required parameter 'body' is set
+      if (body == undefined || body == null) {
+        throw new Error("Missing the required parameter 'body' when calling update");
+      }
 
 
       var pathParams = {

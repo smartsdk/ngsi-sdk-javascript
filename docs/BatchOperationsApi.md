@@ -22,7 +22,7 @@ var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
 
-var body = new NgsiV2.QueryRequest(); // QueryRequest | 
+var body = new NgsiV2.Body3(); // Body3 | 
 
 var opts = { 
   'limit': 1.2, // Number | Limit the number of entities to be retrieved.
@@ -45,7 +45,7 @@ apiInstance.query(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**QueryRequest**](QueryRequest.md)|  | 
+ **body** | [**Body3**](Body3.md)|  | 
  **limit** | **Number**| Limit the number of entities to be retrieved. | [optional] 
  **offset** | **Number**| Skip a number of records. | [optional] 
  **orderBy** | **String**| Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details. | [optional] 
@@ -66,7 +66,7 @@ No authorization required
 
 <a name="update"></a>
 # **update**
-> update(opts)
+> update(body, opts)
 
 
 
@@ -77,6 +77,8 @@ This operation allows to create, update and/or delete several entities in a sing
 var NgsiV2 = require('ngsi_v2');
 
 var apiInstance = new NgsiV2.BatchOperationsApi();
+
+var body = new NgsiV2.Body2(); // Body2 | 
 
 var opts = { 
   'options': "options_example" // String | Options dictionary
@@ -89,13 +91,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.update(opts, callback);
+apiInstance.update(body, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**Body2**](Body2.md)|  | 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type

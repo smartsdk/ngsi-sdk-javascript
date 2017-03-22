@@ -100,6 +100,8 @@ Class | Method | HTTP request | Description
 
  - [NgsiV2.Body](docs/Body.md)
  - [NgsiV2.Body1](docs/Body1.md)
+ - [NgsiV2.Body2](docs/Body2.md)
+ - [NgsiV2.Body3](docs/Body3.md)
  - [NgsiV2.CreateANewSubscriptionRequest](docs/CreateANewSubscriptionRequest.md)
  - [NgsiV2.InlineResponse200](docs/InlineResponse200.md)
  - [NgsiV2.InlineResponse2001](docs/InlineResponse2001.md)
