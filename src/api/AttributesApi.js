@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorModel'], factory);
+    define(['ApiClient', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorModel);
+    root.NgsiV2.AttributesApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, ErrorModel) {
+}(this, function(ApiClient, ErrorResponse) {
   'use strict';
 
   /**

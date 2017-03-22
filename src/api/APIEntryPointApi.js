@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorModel', 'model/InlineResponse200'], factory);
+    define(['ApiClient', 'model/ErrorResponse', 'model/InlineResponse200'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorModel'), require('../model/InlineResponse200'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/InlineResponse200'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.APIEntryPointApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorModel, root.NgsiV2.InlineResponse200);
+    root.NgsiV2.APIEntryPointApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.ErrorResponse, root.NgsiV2.InlineResponse200);
   }
-}(this, function(ApiClient, ErrorModel, InlineResponse200) {
+}(this, function(ApiClient, ErrorResponse, InlineResponse200) {
   'use strict';
 
   /**

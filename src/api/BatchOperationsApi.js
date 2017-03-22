@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Body2', 'model/Body3', 'model/ErrorModel'], factory);
+    define(['ApiClient', 'model/Body2', 'model/Body3', 'model/ErrorResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'), require('../model/ErrorModel'));
+    module.exports = factory(require('../ApiClient'), require('../model/Body2'), require('../model/Body3'), require('../model/ErrorResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {
       root.NgsiV2 = {};
     }
-    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body2, root.NgsiV2.Body3, root.NgsiV2.ErrorModel);
+    root.NgsiV2.BatchOperationsApi = factory(root.NgsiV2.ApiClient, root.NgsiV2.Body2, root.NgsiV2.Body3, root.NgsiV2.ErrorResponse);
   }
-}(this, function(ApiClient, Body2, Body3, ErrorModel) {
+}(this, function(ApiClient, Body2, Body3, ErrorResponse) {
   'use strict';
 
   /**
