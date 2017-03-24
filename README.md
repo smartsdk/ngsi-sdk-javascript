@@ -55,10 +55,10 @@ var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
-fiware_token.apiKey = "YOUR API KEY"
+fiware_token.apiKey = "YOUR API KEY";
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //fiware_token.apiKeyPrefix['X-Auth-Token'] = "Token"
-var api = new NgsiV2.APIEntryPointApi()
+var api = new NgsiV2.APIEntryPointApi();
 
 var callback = function(error, data, response) {
   if (error) {
