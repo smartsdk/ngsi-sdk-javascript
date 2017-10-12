@@ -2,7 +2,7 @@
 
 The API SDK has been developed with the supprot of [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) project:
 
-- API version: v2
+- API version: v2 (available [here](https://app.swaggerhub.com/apis/chicco785/ngsi/v2))
 
 ## Installation
 
