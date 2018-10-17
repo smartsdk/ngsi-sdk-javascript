@@ -4,9 +4,67 @@ All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**notify**](BatchOperationsApi.md#notify) | **POST** /op/notify | 
 [**query**](BatchOperationsApi.md#query) | **POST** /op/query | 
 [**update**](BatchOperationsApi.md#update) | **POST** /op/update | 
 
+
+<a name="notify"></a>
+# **notify**
+> notify(body, opts)
+
+
+
+This operation is intended to consume a notification payload so that all the entity data included by such notification is persisted, overwriting if necessary. This operation is useful when one NGSIv2 endpoint is subscribed to another NGSIv2 endpoint (federation scenarios). The request payload must be an NGSIv2 notification payload. The behaviour must be exactly the same as POST /v2/op/update with actionType equal to append. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for more details.
+
+### Example
+```javascript
+var NgsiV2 = require('ngsi_v2');
+var defaultClient = NgsiV2.ApiClient.instance;
+
+// Configure API key authorization: fiware_token
+var fiware_token = defaultClient.authentications['fiware_token'];
+fiware_token.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//fiware_token.apiKeyPrefix = 'Token';
+
+var apiInstance = new NgsiV2.BatchOperationsApi();
+
+var body = new NgsiV2.Subscription(); // Subscription | 
+
+var opts = { 
+  'options': "options_example" // String | Options dictionary
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.notify(body, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Subscription**](Subscription.md)|  | 
+ **options** | **String**| Options dictionary | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[fiware_token](../README.md#fiware_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="query"></a>
 # **query**
@@ -19,7 +77,7 @@ The response payload is an Array containing one object per matching entity, or a
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -77,12 +135,12 @@ Name | Type | Description  | Notes
 
 
 
-This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity Representation format   (described in the section \&quot;JSON Entity Representation\&quot;). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + &#x60;actionType&#x60;, to specify the kind of update action to do: either &#x60;append&#x60;, &#x60;appendStrict&#x60;, &#x60;update&#x60;,   &#x60;delete&#x60;. + &#x60;entities&#x60;, an array of entities, each one specified using the JSON entity Representation format   (described in the section \&quot;JSON Entity Representation\&quot;).    Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];

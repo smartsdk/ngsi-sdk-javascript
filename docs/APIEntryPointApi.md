@@ -18,7 +18,7 @@ This resource does not have any attributes. Instead it offers the initial API af
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];

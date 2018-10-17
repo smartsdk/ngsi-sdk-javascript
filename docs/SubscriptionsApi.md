@@ -22,7 +22,7 @@ Creates a new subscription. The subscription is represented by a JSON object as 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -75,7 +75,7 @@ Cancels subscription. Response: * Successful operation uses 204 No Content * Err
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -128,7 +128,7 @@ The response is the subscription represented by a JSON object as described at th
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -181,7 +181,7 @@ Returns a list of all the subscriptions present in the system. Response: * Succe
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 <a name="updateSubscription"></a>
 # **updateSubscription**
-> updateSubscription(subscriptionId, body)
+> UpdateSubscriptionResponse updateSubscription(subscriptionId, body)
 
 
 
@@ -239,7 +239,7 @@ Only the fields included in the request are updated in the subscription. Respons
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -258,7 +258,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.updateSubscription(subscriptionId, body, callback);
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**UpdateSubscriptionResponse**](UpdateSubscriptionResponse.md)
 
 ### Authorization
 
