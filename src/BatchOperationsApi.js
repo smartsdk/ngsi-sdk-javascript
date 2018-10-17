@@ -19,7 +19,7 @@
     define(['ApiClient', 'model/BatchOperation', 'model/ErrorResponse', 'model/Query', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BatchOperation'), require('./model/ErrorResponse'), require('./model/Query'), require('./model/Subscription'));
+    module.exports = factory(require('../ApiClient'), require('../model/BatchOperation'), require('../model/ErrorResponse'), require('../model/Query'), require('../model/Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {

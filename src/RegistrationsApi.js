@@ -19,7 +19,7 @@
     define(['ApiClient', 'model/ErrorResponse', 'model/Registration', 'model/RegistrationResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ErrorResponse'), require('./model/Registration'), require('./model/RegistrationResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/Registration'), require('../model/RegistrationResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.NgsiV2) {

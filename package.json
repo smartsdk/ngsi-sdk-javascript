@@ -1,6 +1,6 @@
 {
   "name": "ngsi_v2",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Javascript Client for NGSI v2",
   "license": "MIT",
   "main": "src/index.js",
@@ -11,13 +11,11 @@
     "fs": false
   },
   "dependencies": {
-    "prompt": "^1.0.0",
-    "request": "^2.88.0",
-    "superagent": "^3.8.3"
+    "superagent": "3.5.2"
   },
   "devDependencies": {
-    "expect.js": "~0.3.1",
-    "mocha": "^5.2.0",
-    "sinon": "1.17.3"
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
   }
 }
