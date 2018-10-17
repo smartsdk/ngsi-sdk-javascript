@@ -1,6 +1,6 @@
 {
   "name": "ngsi_v2",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Javascript Client for NGSI v2",
   "license": "MIT",
   "main": "src/index.js",
