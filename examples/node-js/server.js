@@ -23,8 +23,14 @@ var prompt = require('prompt');
               password: result.password} },
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
-          testAPI(body);
-        }
+	  token = body.replace(/\r?\n|\r/g, '')
+          console.log("token: "+ token);
+          testAPI(token);
+        } else {
+	  console.error("invalid user/password");
+          console.error("status code:" +response.statusCode);
+	  return 1;
+	} 
     }
   );
 
@@ -42,25 +48,11 @@ var prompt = require('prompt');
 
    // Configure API key authorization: fiware_token
    var fiware_token = defaultClient.authentications['fiware_token'];
-   fiware_token.apiKey = data;
+   fiware_token.apiKey = encodeURIComponent(data);
    //fiware_token.apiKey = "token";
 
    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
    // fiware_token.apiKey['X-Auth-Token'] = "Token"
-
-   var apiInstance = new NgsiV2.EntitiesApi();
-
-   var opts = {};
-
-   var callback = function(error, data, response) {
-     if (error) {
-       console.error(error);
-     } else {
-       console.log('API called successfully. Returned data: ' + JSON.stringify(data, null, 2));
-     }
-   };
-
-   apiInstance.listEntities(opts, callback);
 
    var apiInstance = new NgsiV2.APIEntryPointApi();
 
@@ -72,4 +64,24 @@ var prompt = require('prompt');
      }
    };
    apiInstance.retrieveAPIResources(callback);
+
+   apiInstance = new NgsiV2.EntitiesApi();
+
+   var opts = {};
+
+   apiInstance.listEntities(opts, callback);
+
+   apiInstance = new NgsiV2.SubscriptionsApi();
+
+   apiInstance.retrieveSubscriptions(opts, callback);
+
+   apiInstance = new NgsiV2.RegistrationsApi();
+
+   apiInstance.retrieveRegistrations(opts, callback);
+
+   apiInstance = new NgsiV2.EntitiesApi();
+
+   var entityId = "urn:smartsantander:testbed:357"; // String | Id of the entity to be retrieved
+
+   apiInstance.retrieveEntity(entityId, opts, callback);
  }
