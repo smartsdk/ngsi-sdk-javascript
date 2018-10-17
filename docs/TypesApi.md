@@ -19,7 +19,7 @@ This operation returns a JSON object with information about the type: * &#x60;at
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -72,7 +72,7 @@ If the &#x60;values&#x60; option is not in use, this operation returns a JSON ar
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];

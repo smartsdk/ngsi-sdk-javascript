@@ -11,13 +11,13 @@ Name | Type | Description | Notes
 ## Enum: ActionTypeEnum
 
 
-* `APPEND` (value: `"APPEND"`)
+* `append` (value: `"append"`)
 
-* `APPEND_STRICT` (value: `"APPEND_STRICT"`)
+* `appendStrict` (value: `"appendStrict"`)
 
-* `UPDATE` (value: `"UPDATE"`)
+* `update` (value: `"update"`)
 
-* `DELETE` (value: `"DELETE"`)
+* `delete` (value: `"delete"`)
 
 
 

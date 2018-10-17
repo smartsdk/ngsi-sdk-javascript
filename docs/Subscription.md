@@ -3,12 +3,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | **String** |  | 
 **description** | **String** |  | [optional] 
-**subject** | **Object** |  | [optional] 
-**notification** | **Object** |  | [optional] 
+**subject** | [**SubscriptionSubject**](SubscriptionSubject.md) |  | 
+**notification** | [**SubscriptionNotification**](SubscriptionNotification.md) |  | 
 **expires** | **Date** |  | [optional] 
 **status** | **String** |  | [optional] 
 **throttling** | **Number** |  | [optional] 
+
+
+<a name="StatusEnum"></a>
+## Enum: StatusEnum
+
+
+* `active` (value: `"active"`)
+
+* `inactive` (value: `"inactive"`)
+
+
 
 

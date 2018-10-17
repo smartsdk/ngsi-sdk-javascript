@@ -20,12 +20,12 @@ Method | HTTP request | Description
 
 
 
-The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \&quot;JSON Entity Representation\&quot; section). Response: * Successful operation uses 201 Created. Reponse includes a &#x60;Location&#x60; header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \&quot;JSON Entity Representation\&quot; section). Response: * Successful operation uses 201 Created or 204 No Content (if upsert option is used). Response includes a &#x60;Location&#x60; header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -82,7 +82,7 @@ Retrieves a list of entities that match different criteria by id, type, pattern 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -101,10 +101,11 @@ var opts = {
   'mq': "mq_example", // String | A query expression for attribute metadata, composed of a list of statements separated by `;`, i.e., mq=statement1;statement2;statement3. See [Simple Query Language specification](#simple_query_language).
   'georel': "georel_example", // String | Spatial relationship between matching entities and a reference shape. See [Geographical Queries](#geographical_queries).
   'geometry': "geometry_example", // String | Geografical area to which the query is restricted. See [Geographical Queries](#geographical_queries).
-  'coords': "coords_example", // String | List of latitude-longitude pairs of coordinates separated by ';'. See [Geographical Queries](#geographical_queries).
+  'coords': "coords_example", // String | List of latitude-longitude pairs of coordinates separated by `;`. See [Geographical Queries](#geographical_queries).
   'limit': 1.2, // Number | Limits the number of entities to be retrieved
   'offset': 1.2, // Number | Establishes the offset from where entities are retrieved
   'attrs': "attrs_example", // String | Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order.
+  'metadata': "metadata_example", // String | A list of metadata names to include in the response.
   'orderBy': "orderBy_example", // String | Criteria for ordering results. See \"Ordering Results\" section for details.
   'options': "options_example" // String | Options dictionary
 };
@@ -131,10 +132,11 @@ Name | Type | Description  | Notes
  **mq** | **String**| A query expression for attribute metadata, composed of a list of statements separated by &#x60;;&#x60;, i.e., mq&#x3D;statement1;statement2;statement3. See [Simple Query Language specification](#simple_query_language). | [optional] 
  **georel** | **String**| Spatial relationship between matching entities and a reference shape. See [Geographical Queries](#geographical_queries). | [optional] 
  **geometry** | **String**| Geografical area to which the query is restricted. See [Geographical Queries](#geographical_queries). | [optional] 
- **coords** | **String**| List of latitude-longitude pairs of coordinates separated by &#39;;&#39;. See [Geographical Queries](#geographical_queries). | [optional] 
+ **coords** | **String**| List of latitude-longitude pairs of coordinates separated by &#x60;;&#x60;. See [Geographical Queries](#geographical_queries). | [optional] 
  **limit** | **Number**| Limits the number of entities to be retrieved | [optional] 
  **offset** | **Number**| Establishes the offset from where entities are retrieved | [optional] 
  **attrs** | **String**| Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order. | [optional] 
+ **metadata** | **String**| A list of metadata names to include in the response. | [optional] 
  **orderBy** | **String**| Criteria for ordering results. See \&quot;Ordering Results\&quot; section for details. | [optional] 
  **options** | **String**| Options dictionary | [optional] 
 
@@ -162,7 +164,7 @@ Delete the entity. Response: * Successful operation uses 204 No Content * Errors
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -219,7 +221,7 @@ The request payload is an object representing the new entity attributes. The obj
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -281,7 +283,7 @@ The response is an object representing the entity identified by the ID. The obje
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -296,6 +298,7 @@ var entityId = "entityId_example"; // String | Id of the entity to be retrieved
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in case there are several entities with the same entity id.
   'attrs': "attrs_example", // String | Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+  'metadata': "metadata_example", // String | A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
   'options': "options_example" // String | Options dictionary
 };
 
@@ -316,6 +319,7 @@ Name | Type | Description  | Notes
  **entityId** | **String**| Id of the entity to be retrieved | 
  **type** | **String**| Entity type, to avoid ambiguity in case there are several entities with the same entity id. | [optional] 
  **attrs** | **String**| Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response. | [optional] 
+ **metadata** | **String**| A list of metadata names to include in the response. See \&quot;Filtering out attributes and metadata\&quot; section for more detail. | [optional] 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -342,7 +346,7 @@ This request is similar to retreiving the whole entity, however this one omits t
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -357,6 +361,7 @@ var entityId = "entityId_example"; // String | Id of the entity to be retrieved
 var opts = { 
   'type': "type_example", // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
   'attrs': "attrs_example", // String | Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+  'metadata': "metadata_example", // String | A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
   'options': "options_example" // String | Options dictionary
 };
 
@@ -377,6 +382,7 @@ Name | Type | Description  | Notes
  **entityId** | **String**| Id of the entity to be retrieved | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
  **attrs** | **String**| Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response. | [optional] 
+ **metadata** | **String**| A list of metadata names to include in the response. See \&quot;Filtering out attributes and metadata\&quot; section for more detail. | [optional] 
  **options** | **String**| Options dictionary | [optional] 
 
 ### Return type
@@ -403,7 +409,7 @@ The request payload is an object representing the attributes to update. The obje
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -460,12 +466,12 @@ null (empty response body)
 
 
 
-The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \&quot;JSON Entity Representation\&quot; section), except that &#x60;id&#x60; and &#x60;type&#x60; are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the &#x60;append&#x60; operation option is used or not. * If &#x60;append&#x60; is not used: the entity attributes are updated (if they previously exist) or appended   (if they don&#39;t previously exist) with the ones in the payload. * If &#x60;append&#x60; is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
+The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \&quot;JSON Entity Representation\&quot; section), except that &#x60;id&#x60; and &#x60;type&#x60; are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the &#x60;append&#x60; operation option is used or not. * If &#x60;append&#x60; is not used: the entity attributes are updated (if they previously exist) or appended   (if they don&#39;t previously exist) with the ones in the payload. * If &#x60;append&#x60; is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned.    Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \&quot;Error Responses\&quot; for   more details.
 
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];

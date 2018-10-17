@@ -20,7 +20,7 @@ Returns a JSON object with the attribute data of the attribute. The object follo
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -35,7 +35,8 @@ var entityId = "entityId_example"; // String | Id of the entity
 var attrName = "attrName_example"; // String | Name of the attribute to be retrieved.
 
 var opts = { 
-  'type': "type_example" // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
+  'type': "type_example", // String | Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
+  'metadata': "metadata_example" // String | A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
 };
 
 var callback = function(error, data, response) {
@@ -55,6 +56,7 @@ Name | Type | Description  | Notes
  **entityId** | **String**| Id of the entity | 
  **attrName** | **String**| Name of the attribute to be retrieved. | 
  **type** | **String**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
+ **metadata** | **String**| A list of metadata names to include in the response. See \&quot;Filtering out attributes and metadata\&quot; section for more detail. | [optional] 
 
 ### Return type
 
@@ -80,7 +82,7 @@ Removes an entity attribute. Response: * Successful operation uses 204 No Conten
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
@@ -140,7 +142,7 @@ The request payload is an object representing the new attribute data. Previous a
 ### Example
 ```javascript
 var NgsiV2 = require('ngsi_v2');
-var defaultClient = NgsiV2.ApiClient.default;
+var defaultClient = NgsiV2.ApiClient.instance;
 
 // Configure API key authorization: fiware_token
 var fiware_token = defaultClient.authentications['fiware_token'];
